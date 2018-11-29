@@ -3,7 +3,11 @@ package com.pumbank.models;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
@@ -14,9 +18,17 @@ import javax.persistence.Table;
 
 public class Congelar {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int conid;
+	
+	@Column(name="fecha_inicio")
 	private Date fecha_inicio;
+	
+	@Column(name="fecha_fin")
 	private Date fecha_fin;
+	
+	@Column(name="activado")
 	private boolean activado;
 	
 	@ManyToMany(mappedBy = "congelada")
