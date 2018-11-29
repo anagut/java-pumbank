@@ -1,34 +1,62 @@
 package com.pumbank.models;
 
 import java.util.Date;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="hijo")
 
 public class Hijx {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int hid;
-	private int pid;
+	
+	
+	@Column(name="nombre")
 	private String nombre;
+	
+	@Column(name="apellidos")
 	private String apellidos;
+	
+	@Column(name="fecha_nacimiento")
 	private Date fecha_nacimiento;
+	
+	@Column(name="saldo")
 	private int saldo;
+	
+	@Column(name="email")
 	private String email;
+	
+	@Column(name="contraseña")
 	private String contraseña;
+	
+	@ManyToMany(mappedBy = "hijos")
+	private List<Padre> padre;
 	
 	
 	public Hijx() {}
 
 
-	public Hijx(int hid, int pid, String nombre, String apellidos, Date fecha_nacimiento, int saldo, String email,
-			String contraseña) {
-
-		
+	public Hijx(int hid, String nombre, String apellidos, Date fecha_nacimiento, int saldo, String email,
+			String contraseña, List<Padre> padre) {
+		super();
 		this.hid = hid;
-		this.pid = pid;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.fecha_nacimiento = fecha_nacimiento;
 		this.saldo = saldo;
 		this.email = email;
 		this.contraseña = contraseña;
+		this.padre = padre;
 	}
 
 
@@ -42,13 +70,13 @@ public class Hijx {
 	}
 
 
-	public int getPid() {
-		return pid;
+	public List<Padre> getPadre() {
+		return padre;
 	}
 
 
-	public void setPid(int pid) {
-		this.pid = pid;
+	public void setPadre(List<Padre> padre) {
+		this.padre = padre;
 	}
 
 

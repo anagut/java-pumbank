@@ -1,23 +1,82 @@
 package com.pumbank.models;
 
 import java.util.Date;
+import java.util.List;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="padre")
 
 public class Padre {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int pid;
+	
+	@Column(name="nombre")
 	private String nombre;
+	
+	@Column(name="apellidos")
 	private String apellidos;
+	
+	@Column(name="fecha_nacimiento")
 	private Date fecha_nacimiento;
+	
+	@Column(name="tarjeta_credito")
 	private String tarjeta_credito;
+	
+	@Column(name="cvv")
 	private int cvv;
-	private String hijo;
+	
+	@Column(name="email")
 	private String email;
+	
+	@Column(name="contraseña")
 	private String contraseña;
+	
+	@ManyToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+        name = "padre_hijo_rel", 
+        joinColumns = { @JoinColumn(name = "padre") }, 
+        inverseJoinColumns = { @JoinColumn(name = "hijo") }
+    )
+	private List<Hijx> hijos;
+	
+	@ManyToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+        name = "padre_paga_rel", 
+        joinColumns = { @JoinColumn(name = "padre") }, 
+        inverseJoinColumns = { @JoinColumn(name = "paga") }
+    )
+	private List<Paga> pagas;
+	
+	@ManyToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+        name = "padre_congelar_rel", 
+        joinColumns = { @JoinColumn(name = "padre") }, 
+        inverseJoinColumns = { @JoinColumn(name = "congelar") }
+    )
+	private List<Congelar> congelada;
 	
 	public Padre() {
 	}
 
+
 	public Padre(int pid, String nombre, String apellidos, Date fecha_nacimiento, String tarjeta_credito, int cvv,
-			String hijo, String email, String contraseña) {
+			String email, String contraseña, List<Hijx> hijos, List<Paga> pagas, List<Congelar> congelada) {
 		super();
 		this.pid = pid;
 		this.nombre = nombre;
@@ -25,10 +84,33 @@ public class Padre {
 		this.fecha_nacimiento = fecha_nacimiento;
 		this.tarjeta_credito = tarjeta_credito;
 		this.cvv = cvv;
-		this.hijo = hijo;
 		this.email = email;
 		this.contraseña = contraseña;
+		this.hijos = hijos;
+		this.pagas = pagas;
+		this.congelada = congelada;
 	}
+
+
+
+	public List<Congelar> getCongelada() {
+		return congelada;
+	}
+
+
+	public void setCongelada(List<Congelar> congelada) {
+		this.congelada = congelada;
+	}
+
+
+	public List<Hijx> getHijos() {
+		return hijos;
+	}
+
+	public void setHijos(List<Hijx> hijos) {
+		this.hijos = hijos;
+	}
+
 
 	public int getPid() {
 		return pid;
@@ -78,13 +160,6 @@ public class Padre {
 		this.cvv = cvv;
 	}
 
-	public String getHijo() {
-		return hijo;
-	}
-
-	public void setHijo(String hijo) {
-		this.hijo = hijo;
-	}
 
 	public String getEmail() {
 		return email;
@@ -102,6 +177,13 @@ public class Padre {
 		this.contraseña = contraseña;
 	}
 	
+	public List<Paga> getPagas() {
+		return pagas;
+	}
+
+	public void setPagas(List<Paga> pagas) {
+		this.pagas = pagas;
+	}
 	
 }
 
