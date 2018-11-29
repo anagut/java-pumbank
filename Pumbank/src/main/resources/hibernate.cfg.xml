@@ -10,6 +10,9 @@
         <property name="hbm2ddl.auto">update</property>
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1bdc34b78503d1f296888bfd3b0279bba6f4a91f
         <property name="connection.url">jdbc:oracle:thin:@localhost/pumbank</property>
         <property name="connection.username">user</property>
         <property name="connection.password">eu123</property>
