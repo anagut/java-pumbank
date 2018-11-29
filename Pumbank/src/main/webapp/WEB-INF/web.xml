@@ -1,3 +1,14 @@
 <web-app version="3.1">
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>HijoServlet</display-name>
+  	<servlet-name>HijoServlet</servlet-name>
+  	<servlet-class>com.pumbank.servlet.HijoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>HijoServlet</servlet-name>
+  	<url-pattern>/hijo</url-pattern>
+  </servlet-mapping>
 </web-app>
