@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Original+Surfer" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/admin-paga_style.css">
+
+</head>
+
+<body>
+    <div>
+        <header>
+            <div id="menulateral">
+                <!-- aqui esta el boton de la bellota -->
+                <div class="btn-group dropright">
+                    <button type="button" class="btn-btn-secondary-dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img class="bellota" src="./imgs/Bellota-Kawaii-83631.gif" alt="">
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="./pumbanking.html">Pumbanking</a>
+                        <a class="dropdown-item" href="./control_parental.html">Control parental</a>
+                        <a class="dropdown-item" href="#">Paga</a>
+                        <a class="dropdown-item" href="#">Transferencia</a>
+                        <a class="dropdown-item" href="#">Ajustes</a>
+                    </div>
+                    <div class="dropdown-menu">
+                        <!-- Dropdown menu links -->
+                    </div>
+                </div>
+            </div>
+            <div id="logo">
+                <a href="./homepage_sr.html">
+                    <h1 id=name>RICARDO JR</h1>
+                </a>
+            </div>
+        </header>
+        <section>
+            <div>
+                <h2>Transferencia puntual</h2>
+                <div id="mensaje" class="error esconder">Introduce bien los datos</div>
+                <form id="transferForm" action="" class="row" method="POST" novalidate>
+
+                    <div class="row">
+                        <label for="niño">Usuario</label>
+                        <select name="nombre_niño" id="nombre_niño_paga">
+                            <option value="Ricardo" disabled selected>Ricardo Jr</option>
+                            <option value="Rik" disabled>Rik</option>
+                            <option value="Rok" disabled>Rok</option>
+                        </select>
+                    </div>
+
+                    <div class="row">
+                        <label class="col-4" for="Cantidad">Cantidad</label>
+                        <input class="col-4" type="text" pattern="[0-9]*" id="cant" name="cant" required>
+                        <label class="col-1" for="">€</label>
+                        <div id="errorcant" class="error esconder">Completa la cantidad</div>
+                    </div>
+               
+                    <div class="row">
+                        <div id="datosbancarios" class="row">
+                            <label for="datosbancarios">Datos bancarios</label>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <label class="col-5" for="tarjeta">Nº de tarjeta</label>
+                                <input id="datosbanc" class="col-4" type="text" minlength="16" maxlength="18" name="datosbanc"
+                                    required>
+                                <div id="errorbanc" class="error esconder">Completa los datos bancarios</div>
+                            </div>
+                            <div>
+                                <label for="CVV"></label>
+                                <input id="CVV" name="CVV" class="noflechas" type="number" minlength="3" maxlength="3"
+                                    placeholder="CVV" required>
+
+                                <div id="errorCVV" class="error esconder">Completa con el formato correcto</div>
+                            </div>
+                        </div>
+
+                        <div id="datostarjeta">
+                            <div>Caducidad</div>
+
+                            <div id="caducidad">
+                                <div>
+                                    <div>
+                                        <select id="mes" name="mes" class="noflechas" type="number" required>
+                                            <option value="0" value="" disabled selected>MM</option>
+                                            <option value="1" type="">01</option>
+                                            <option value="2" type="">02</option>
+                                            <option value="3" type="">03</option>
+                                            <option value="4" type="">04</option>
+                                            <option value="5" type="">05</option>
+                                            <option value="6" type="">06</option>
+                                            <option value="7" type="">07</option>
+                                            <option value="8" type="">08</option>
+                                            <option value="9" type="">09</option>
+                                            <option value="10" type="">10</option>
+                                            <option value="11" type="">11</option>
+                                            <option value="12" type="">12</option>
+                                        </select>
+
+                                        <select id="año" name="año" type="number">
+                                            <option value="0" value="" disabled selected>YYYY</option>
+                                            <option value="01">2018</option>
+                                            <option value="02">2019</option>
+                                            <option value="03">2020</option>
+                                            <option value="04">2021</option>
+                                            <option value="05">2022</option>
+                                            <option value="06">2023</option>
+                                            <option value="07">2024</option>
+                                            <option value="08">2025</option>
+                                            <option value="09">2026</option>
+                                            <option value="10">2027</option>
+                                        </select>
+
+                                        <div id="errormes" class="error esconder">Completa correctamente la fecha de
+                                            caducidad</div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <button id="accederbtn">Cofirmar</button>
+                        <button id="cancelar_paga">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/admin-transferencia_scrypt.js"></script>
+
+</html>

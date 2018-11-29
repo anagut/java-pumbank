@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Registrarse</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Original+Surfer" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/register-styles.css">
+
+</head>
+
+<body>
+    <div>
+        <header>
+            <div>
+                <a href="#">
+                    <h1 id="name">REGISTRARSE</h1>
+                </a>
+            </div>
+        </header>
+
+        <div id="mensaje" class="error esconder">Completa los campos requeridos</div>
+        <form action="" method="post" id="register_form" novalidate>
+            <div><input id="nombre" type="text" placeholder="Nombre" minlength="3" maxlength="10" pattern="[a-zA-Z]*"
+                    required="*"></div>
+            <div id="errorUsername" class="error esconder">*El nombre debe tener 3-10 caracteres alfabéticos</div>
+            <div><input id="apellido1" type="text" placeholder="Apellido 1" required></div>
+            <div><input id="apellido2" type="text" placeholder="Apellido 2"></div>
+            <div><input id="email" type="text" placeholder="Correo electrónico" required></div>
+            <div><input type="text" id="conf_email" placeholder="Confirma el correo electrónico" required></div>
+            <div id="emailNoEqs" class="error esconder">*Los emails no son iguales</div>
+
+            <div>
+                <div>Fecha de Nacimiento</div>
+                <input id="birthdate" type="date" required>
+                <div id="errorBirth" class="error esconder">*Introduce una fecha</div>
+            </div>
+            <div><input id="password" type="password" placeholder="Contraseña" pattern= "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required></div>
+            <div id="errorPassword" class="error esconder">*Introduce una contraseña valida. Debe contener: al menos ocho caracteres, entre ellos una letra mayúscula, otra minúsucla, y un número</div>
+            <div><input type="password" id="conf_password" placeholder="Confirma tu contraseña" required></div>
+            <div id="passNoEqs" class="error esconder">*Las contraseñas no son iguales</div>
+
+            <div><button id="registerBtn">Siguiente</button></div>
+        </form>
+    </div>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/register-script.js"></script>
+
+</html>

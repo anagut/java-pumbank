@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Original+Surfer" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/login_style.css">
+
+</head>
+
+<body>
+    <div id="fondo" class="row">
+        <header>
+
+            <div id="logo">
+                <a href="#">
+                    <h1 id=name>Pumbank</h1>
+                </a>
+            </div>
+        </header>
+        <section>
+            <div id="mensaje" class="error esconder">Usuario y contraseña no válidos</div>
+
+            <form id="loginForm" action="" method="POST" novalidate>
+                <div>
+                    <input type="text" placeholder="username" minlength="3" id="username" name="username" required>
+                    <div id="errorusername" class="error esconder">Completa el username con el formato
+                        correcto</div>
+                </div>
+                <div>
+                    <input type="password" placeholder="password" pattern="[a-zA-Z0-9]*" id="password" name="password"
+                        required>
+                    <div id="errorpass" class="error esconder">Completa el password con el formato correcto</div>
+                </div>
+                <div><button id="accederbtn">  Acceder  </button></div>
+                
+            </form>
+
+            <div><button id="registrarsebtn">Registrarse</button></div>
+        </section>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/login_scrypt.js"></script>
+
+</html>

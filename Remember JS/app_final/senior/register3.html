@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hijos/as</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Original+Surfer" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/register-styles.css">
+
+</head>
+
+<body>
+    <div>
+        <header>
+            <div>
+                <h1 id="name">HIJOS/AS</h1>
+            </div>
+        </header>
+
+        <form action="" id="addForm">
+            <div><input id="nombre" type="text" placeholder="Nombre" minlength="3" maxlength="10" pattern="[a-zA-Z]*"
+                    required="*"></div>
+            <div id="errorUsername" class="error esconder">El nombre debe tener 3-10 caracteres alfabéticos</div>
+            <div><input id="email" type="text" placeholder="Correo electrónico" required></div>
+            <div><input type="text" id="conf_email" placeholder="Confirma el correo electrónico" required></div>
+            <div id="emailNoEqs" class="error esconder">*Los emails no son iguales</div>
+
+            <div>
+                <div>Fecha de Nacimiento</div>
+                <input id="birthdate" type="date" required>
+                <div id="errorBirth" class="error esconder">*Introduce una fecha</div>
+            </div>
+            <button id="addBtn" class="col-11">Añadir Hijo/a</button>
+            <button id="backBtn2">Atras</button>
+            <button id="nextBtn3">Siguiente</button>
+        </form>
+
+        <ul id="hijos"></ul>
+
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/register-script.js"></script>
+
+</html>

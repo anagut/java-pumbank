@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registrarse</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Original+Surfer" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="./css/register-styles.css">
+
+</head>
+
+<body>
+
+    <div>
+        <header>
+            <div>
+                <a href="#">
+                    <h1 id="name">REGISTRARSE</h1>
+                </a>
+            </div>
+        </header>
+
+        <form action="" method="post" id="register_form2">
+
+            <div id="creditcard_type">
+                <input type="radio" name="card" value="1" required><label for="visa">
+                    <span class="pmts-indiv-issuer-image" id="visa"></span>
+                </label>
+                <input type="radio" name="card" value="2" required><label for="mastercard">
+                    <span class="pmts-indiv-issuer-image" id="mastercard"></span>
+                </label>
+                <input type="radio" name="card" value="3" required><label for="maestro">
+                    <span class="pmts-indiv-issuer-image" id="maestro"></span>
+                </label>
+            </div>
+
+            <div>
+                <div>Nº tarjeta de crédito</div>
+
+                <input id="creditcard" type="text" placeholder="4123456789012345" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"
+                    required>
+
+                    <div id="creditcarderror" class="error esconder">*El número de tarjeta no es correcto</div>
+
+
+            </div>
+            <div>
+                <div id="vencimiento">Fecha de Vencimiento</div>
+                <select id="cc_exp_month" required>
+                    <option value="0" value="" disabled selected>MM</option>
+                    <option value="1" type="">01</option>
+                    <option value="2" type="">02</option>
+                    <option value="3" type="">03</option>
+                    <option value="4" type="">04</option>
+                    <option value="5" type="">05</option>
+                    <option value="6" type="">06</option>
+                    <option value="7" type="">07</option>
+                    <option value="8" type="">08</option>
+                    <option value="9" type="">09</option>
+                    <option value="10" type="">10</option>
+                    <option value="11" type="">11</option>
+                    <option value="12" type="">12</option>
+                </select>
+                <select id="cc_exp_year" required>
+                    <option value="0" value="" disabled selected>YYYY</option>
+                    <option value="01">2018</option>
+                    <option value="02">2019</option>
+                    <option value="03">2020</option>
+                    <option value="04">2021</option>
+                    <option value="05">2022</option>
+                    <option value="06">2023</option>
+                    <option value="07">2024</option>
+                    <option value="08">2025</option>
+                    <option value="09">2026</option>
+                    <option value="10">2027</option>
+                </select>
+            </div>
+            <div>
+                <input id="cvv" type="text" placeholder="CVV" pattern="\d{3}" max="3" maxlength="3" required>
+                <div id="errorcvv" class="error esconder">*El CVV son los tres ultimos dígitos que se encuentran en el dorso de la tarjeta</div>
+            </div>
+            <button id="backBtn">Atras</button>
+            <button id="nextBtn2">Siguiente</button>
+
+        </form>
+    </div>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/register-script.js"></script>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Original+Surfer" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./admin-paga_style.css">
+
+</head>
+
+<body>
+    <div>
+        <header>
+            <div id="menulateral">
+                <!-- aqui esta el boton de la bellota -->
+                <div class="btn-group dropright">
+                    <button type="button" class="btn-btn-secondary-dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img class="bellota" src="./imgs/Bellota-Kawaii-83631.gif" alt="">
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="./pumbanking.html">Pumbanking</a>
+                        <a class="dropdown-item" href="./control_parental.html">Control parental</a>
+                        <a class="dropdown-item" href="#">Paga</a>
+                        <a class="dropdown-item" href="#">Transferencia</a>
+                        <a class="dropdown-item" href="#">Ajustes</a>
+                    </div>
+                    <div class="dropdown-menu">
+                        <!-- Dropdown menu links -->
+                    </div>
+                </div>
+            </div>
+            <div id="logo">
+                <a href="./homepage_sr.html">
+                    <h1 id=name>RICARDO JR</h1>
+                </a>
+            </div>
+        </header>
+        <section>
+            <div>
+                <h2>Paga</h2>
+                <form action="" class="row">
+                    <div class="row">
+                        <label class="col-4" for="Cantidad">Cantidad</label>
+                        <input class="col-4" type="number" min="0.1" max="50" step="0.1" required>
+                        <label class="col-1" for="">€</label>
+                    </div>
+                    <div class="row">
+                        <label class="col-4" for="Frecuencia">Frecuencia</label>
+                        <select class="col-5" name="Frecuencia" id="frecuencia" required>
+                            <option value="" disabled selected> </option>
+                            <option value="4">Cada semana</option>
+                            <option value="2">Cada 15 días</option>
+                            <option value="1">Cada mes</option>
+                            <option value="3">Cada día</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div id="datosbancarios" class="row">
+                            <label for="datosbancarios">Datos bancarios</label>
+                        </div>
+                        <div class="row">
+                            <label class="col-5" for="tarjeta">Nº de tarjeta</label>
+                            <input class="col-4" type="text" minlength="16" maxlength="18" required>
+
+                        </div>
+                        <div class="row">
+                            <label class="col-5" for="caducidad">Caducidad</label>
+                            <div id="caducidad" class="col-4">
+                                <input class="noflechas" type="number" min="1" max="12" required placeholder="mm">
+                                <input class="noflechas" type="number" min="18" max="30" required placeholder="aa">
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <button>Cofirmar</button>
+                            <button>Cancelar</button>
+                        </div>
+
+
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+</html>
