@@ -7,8 +7,19 @@
   	<servlet-name>HijoServlet</servlet-name>
   	<servlet-class>com.pumbank.servlet.HijoServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>TransferenciaServlet</display-name>
+  	<servlet-name>TransferenciaServlet</servlet-name>
+  	<servlet-class>com.pumbank.servlet.TransferenciaServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>HijoServlet</servlet-name>
   	<url-pattern>/hijo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>TransferenciaServlet</servlet-name>
+  	<url-pattern>/transferencia</url-pattern>
   </servlet-mapping>
 </web-app>

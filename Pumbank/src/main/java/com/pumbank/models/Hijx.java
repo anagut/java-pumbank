@@ -31,7 +31,7 @@ public class Hijx {
 	private Date fecha_nacimiento;
 	
 	@Column(name="saldo")
-	private int saldo;
+	private Double saldo;
 	
 	@Column(name="email")
 	private String email;
@@ -46,7 +46,7 @@ public class Hijx {
 	public Hijx() {}
 
 
-	public Hijx(int hid, String nombre, String apellidos, Date fecha_nacimiento, int saldo, String email,
+	public Hijx(int hid, String nombre, String apellidos, Date fecha_nacimiento, Double saldo, String email,
 			String contraseña, List<Padre> padre) {
 		super();
 		this.hid = hid;
@@ -110,15 +110,32 @@ public class Hijx {
 	}
 
 
-	public int getSaldo() {
+	public Double getSaldo() {
 		return saldo;
 	}
 
 
-	public void setSaldo(int saldo) {
+	public void setSaldo(Double saldo) {
 		this.saldo = saldo;
 	}
 
+	public Double getSaldoMas() {
+		return saldo;
+	}
+
+
+	public void setSaldoMas(Double saldo) {
+		this.saldo += saldo;
+	}
+	
+	public Double getSaldoMenos() {
+		return saldo;
+	}
+
+
+	public void setSaldoMenos(Double saldo) {
+		this.saldo -= saldo;
+	}
 
 	public String getEmail() {
 		return email;
