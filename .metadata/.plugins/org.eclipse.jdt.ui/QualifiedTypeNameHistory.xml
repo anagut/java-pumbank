@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<<<<<<< HEAD
+<fullyQualifiedTypeName name="com.pumbank.models.Padre"/>
+<fullyQualifiedTypeName name="com.pumbank.persistance.PadreManager"/>
+=======
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="com.pumbank.models.Paga"/>
+<fullyQualifiedTypeName name="com.pumbank.servlet.HijoServlet"/>
+<fullyQualifiedTypeName name="com.pumbank.models.Hijx"/>
+<fullyQualifiedTypeName name="com.pumbank.persistance.HijoManager"/>
+>>>>>>> 9777e7d4d0fcbe5e3b2047fa16918223f23667d9
+</qualifiedTypeNameHistroy>
