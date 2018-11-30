@@ -457,6 +457,35 @@ Binding(CTRL+D,
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2018-11-29 12:45:10.812
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+<<<<<<< HEAD
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-11-29 13:12:46.058
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-11-29 13:12:46.073
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-11-29 13:12:49.135
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-11-29 13:12:49.150
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-11-29 14:52:05.373
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-11-29 14:52:05.404
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-11-29 14:52:05.435
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-11-29 14:52:05.762
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-11-29 14:52:05.778
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+=======
 >>>>>>> 1bdc34b78503d1f296888bfd3b0279bba6f4a91f
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2018-11-29 14:43:11.883
@@ -467,3 +496,4 @@ Binding(CTRL+D,
 
 !ENTRY org.eclipse.core.resources 4 566 2018-11-29 14:43:14.921
 !MESSAGE Workspace was not properly initialized or has already shutdown.
+>>>>>>> 318f16c996525aecdeb6a3a264414d9e821ad29f
