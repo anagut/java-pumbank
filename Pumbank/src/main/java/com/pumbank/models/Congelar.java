@@ -30,11 +30,7 @@ public class Congelar {
 	
 	@Column(name="activado")
 	private boolean activado;
-<<<<<<< HEAD
-=======
 
->>>>>>> c6c33223603d94291d1a989b66836d4cd109dce7
-	
 	public Congelar() {}
 	
 	
@@ -51,10 +47,7 @@ public class Congelar {
 		return conid;
 	}
 
-<<<<<<< HEAD
-=======
 
->>>>>>> c6c33223603d94291d1a989b66836d4cd109dce7
 	public void setConid(int conid) {
 		this.conid = conid;
 	}

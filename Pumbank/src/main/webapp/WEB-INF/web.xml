@@ -26,8 +26,6 @@
 		<servlet-class>com.pumbank.servlet.PagaServlet</servlet-class>
 	</servlet>
 
-<<<<<<< HEAD
-=======
 	<servlet>
 		<description>
 		</description>
@@ -35,8 +33,7 @@
 		<servlet-name>CongelarServlet</servlet-name>
 		<servlet-class>com.pumbank.servlet.CongelarServlet</servlet-class>
 	</servlet>
-	
->>>>>>> c6c33223603d94291d1a989b66836d4cd109dce7
+
 	<servlet-mapping>
 		<servlet-name>HijoServlet</servlet-name>
 		<url-pattern>/hijo</url-pattern>
