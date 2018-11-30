@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.pumbank.models.Hijx;
+import com.pumbank.models.Paga;
 import com.pumbank.persistance.HijoManager;
 
 public class PagaServlet extends HttpServlet {
@@ -30,6 +31,14 @@ public class PagaServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		String cantidadrec = request.getParameter("cantidad");
+		String frecuenciarec = request.getParameter("");
+		
+		double cantidad = Double.parseDouble(cantidadrec);
+		int frecuencia = Integer.getInteger(frecuenciarec);
+		
+		Paga unaPaga = new Paga(0, cantidad, frecuencia, pid, hidrec);
 
 		doGet(request, response);
 	}

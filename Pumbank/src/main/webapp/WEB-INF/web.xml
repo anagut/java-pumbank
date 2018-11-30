@@ -8,11 +8,6 @@
 		<servlet-class>com.pumbank.servlet.HijoServlet</servlet-class>
 	</servlet>
 	<servlet>
-<<<<<<< HEAD
-		<description>
-		</description>
-=======
->>>>>>> 9cdca97eca53082ea4dcfab2e29f0ecf9b4db636
 		<display-name>TransferenciaServlet</display-name>
 		<servlet-name>TransferenciaServlet</servlet-name>
 		<servlet-class>com.pumbank.servlet.TransferenciaServlet
@@ -22,37 +17,21 @@
 		<display-name>PagaServlet</display-name>
 		<servlet-name>PagaServlet</servlet-name>
 		<servlet-class>com.pumbank.servlet.PagaServlet</servlet-class>
-
 	</servlet>
-<<<<<<< HEAD
-=======
-	
->>>>>>> 9cdca97eca53082ea4dcfab2e29f0ecf9b4db636
 	<servlet-mapping>
 		<servlet-name>HijoServlet</servlet-name>
 		<url-pattern>/hijo</url-pattern>
 	</servlet-mapping>
-<<<<<<< HEAD
-	<servlet-mapping>
-
-
-		<servlet-name>TransferenciaServlet</servlet-name>
-		<url-pattern>/transferencia</url-pattern>
-	</servlet-mapping>
-=======
 
 	<servlet-mapping>
 		<servlet-name>TransferenciaServlet</servlet-name>
 		<url-pattern>/transferencia</url-pattern>
 	</servlet-mapping>
 
->>>>>>> 9cdca97eca53082ea4dcfab2e29f0ecf9b4db636
+
 	<servlet-mapping>
 		<servlet-name>PagaServlet</servlet-name>
 		<url-pattern>/paga</url-pattern>
 	</servlet-mapping>
-<<<<<<< HEAD
-=======
 
->>>>>>> 9cdca97eca53082ea4dcfab2e29f0ecf9b4db636
 </web-app>

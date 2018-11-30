@@ -5,21 +5,33 @@
 <head>
 <meta charset="UTF-8">
 <title>Paga</title>
- <link href="https://fonts.googleapis.com/css?family=Original+Surfer" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="./css/admin-paga_style.css"> -->
 
-    <link rel="stylesheet" href="./css/admin-paga_style.css">
-</head>
-<body>
-	<form id="formPaga" method="POST">
-		<div>
-		<label>Usuario</label><input id="nombre" name="nombre" required>${elHijo.nombre}
-		</div>
-		<div>${elHijo.nombre}</div>
-	</form>
-</body>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
+<form method="POST">
+	<div>
+		<label>Usuario</label>
+		<input name="nombre" id="nombre" value="${elHijo.nombre}" required>
+	</div>
+
+	<div>
+		<label>Cantidad</label>
+		<input type="number" name="cantidad" id="cantiad" value="${elSaldo.cantidad}" required>
+		<label>€</label>
+	</div>
+	<div>
+		<label>Frecuencia</label> <select required>
+			<option value="" disabled selected></option>
+			<option value="7">Cada semana</option>
+			<option value="15">Cada 15 días</option>
+			<option value="30">Cada mes</option>
+			<option value="1">Cada día</option>
+		</select>
+	</div>
+	
+	<div><button>Aceptar</button></div>
+	<div><button>Cancelar</button></div>
+
+
+</form>
 </html>
