@@ -1,13 +1,3 @@
 INDEX VERSION 1.131
-<<<<<<< HEAD
-C:\Alvaro\java-pumbank\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1595366035.index
-\EmployeeAppRicMany\src\main\java
 C:\Alvaro\java-pumbank\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\585630123.index
-=======
-C:\Ana\java-pumbank\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1595366035.index
-\EmployeeAppRicMany\src\main\java
-C:\Ana\java-pumbank\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2146072114.index
-\AndresBank_ric\src\main\java
-C:\Ana\java-pumbank\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\585630123.index
->>>>>>> 57a2b54058d3602be11171a0d302cc3de7bf5959
 \Pumbank\src\main\java
