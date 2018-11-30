@@ -29,6 +29,8 @@ public class Paga {
 	private int hid;
 	
 	public Paga() {}
+	
+	
 
 
 	
