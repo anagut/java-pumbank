@@ -29,13 +29,16 @@ public class PadreServlet extends HttpServlet {
 			int pidint = Integer.parseInt(pid);
 			Padre padre = PadreManager.getInstance().getPadre(pidint);
 			request.setAttribute("unP", padre);
+
 			
 		} catch (Exception e) {
 			System.out.println("Exception: " + e.getMessage());
 			request.setAttribute("error", "Tu no eres Xadre");
+
 		}
 		
 		request.getRequestDispatcher("/padre.jsp").forward(request, response);
+
 
 	}
 

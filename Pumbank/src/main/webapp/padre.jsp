@@ -20,11 +20,11 @@
 	<header>
 		<div id="logo">
 			<div class="error">${error}</div>
-			<a href="./homepage_sr.html">
-				<h1 id=name>${UnP.nombre}</h1>
-			</a>
+				<h1 id=name>${unP.nombre}</h1>
 		</div>
 	</header>
+	
+	<div>${unP.nombre}</div>
 	<ul>
 		<c:forEach var="unHijo" items="${hijos}">
 			<li>

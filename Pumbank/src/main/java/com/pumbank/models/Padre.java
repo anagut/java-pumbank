@@ -2,7 +2,6 @@ package com.pumbank.models;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -13,7 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -55,21 +53,7 @@ public class Padre {
     )
 	private List<Hijx> hijos;
 	
-	@ManyToMany(cascade = { CascadeType.ALL })
-    @JoinTable(
-        name = "padre_paga_rel", 
-        joinColumns = { @JoinColumn(name = "padre") }, 
-        inverseJoinColumns = { @JoinColumn(name = "paga") }
-    )
-	private List<Paga> pagas;
-	
-	@ManyToMany(cascade = { CascadeType.ALL })
-    @JoinTable(
-        name = "padre_congelar_rel", 
-        joinColumns = { @JoinColumn(name = "padre") }, 
-        inverseJoinColumns = { @JoinColumn(name = "congelar") }
-    )
-	private List<Congelar> congelada;
+
 	
 	public Padre() {
 	}
@@ -87,20 +71,11 @@ public class Padre {
 		this.email = email;
 		this.contraseña = contraseña;
 		this.hijos = hijos;
-		this.pagas = pagas;
-		this.congelada = congelada;
 	}
 
 
 
-	public List<Congelar> getCongelada() {
-		return congelada;
-	}
 
-
-	public void setCongelada(List<Congelar> congelada) {
-		this.congelada = congelada;
-	}
 
 
 	public List<Hijx> getHijos() {
@@ -177,13 +152,6 @@ public class Padre {
 		this.contraseña = contraseña;
 	}
 	
-	public List<Paga> getPagas() {
-		return pagas;
-	}
 
-	public void setPagas(List<Paga> pagas) {
-		this.pagas = pagas;
-	}
-	
 }
 
