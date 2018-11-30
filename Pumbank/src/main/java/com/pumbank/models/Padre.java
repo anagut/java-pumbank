@@ -2,7 +2,6 @@ package com.pumbank.models;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -13,7 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -54,29 +52,14 @@ public class Padre {
         inverseJoinColumns = { @JoinColumn(name = "hijo") }
     )
 	private List<Hijx> hijos;
-	
-	@ManyToMany(cascade = { CascadeType.ALL })
-    @JoinTable(
-        name = "padre_paga_rel", 
-        joinColumns = { @JoinColumn(name = "padre") }, 
-        inverseJoinColumns = { @JoinColumn(name = "paga") }
-    )
-	private List<Paga> pagas;
-	
-	@ManyToMany(cascade = { CascadeType.ALL })
-    @JoinTable(
-        name = "padre_congelar_rel", 
-        joinColumns = { @JoinColumn(name = "padre") }, 
-        inverseJoinColumns = { @JoinColumn(name = "congelar") }
-    )
-	private List<Congelar> congelada;
+
 	
 	public Padre() {
 	}
 
 
 	public Padre(int pid, String nombre, String apellidos, Date fecha_nacimiento, String tarjeta_credito, int cvv,
-			String email, String contraseña, List<Hijx> hijos, List<Paga> pagas, List<Congelar> congelada) {
+			String email, String contraseña, List<Hijx> hijos) {
 		super();
 		this.pid = pid;
 		this.nombre = nombre;
@@ -87,19 +70,6 @@ public class Padre {
 		this.email = email;
 		this.contraseña = contraseña;
 		this.hijos = hijos;
-		this.pagas = pagas;
-		this.congelada = congelada;
-	}
-
-
-
-	public List<Congelar> getCongelada() {
-		return congelada;
-	}
-
-
-	public void setCongelada(List<Congelar> congelada) {
-		this.congelada = congelada;
 	}
 
 
@@ -176,14 +146,6 @@ public class Padre {
 	public void setContraseña(String contraseña) {
 		this.contraseña = contraseña;
 	}
-	
-	public List<Paga> getPagas() {
-		return pagas;
-	}
 
-	public void setPagas(List<Paga> pagas) {
-		this.pagas = pagas;
-	}
-	
 }
 

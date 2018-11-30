@@ -30,9 +30,10 @@ public class Congelar {
 	
 	@Column(name="activado")
 	private boolean activado;
-	
-	@ManyToMany(mappedBy = "congelada")
-	private List<Padre> padre;
+<<<<<<< HEAD
+=======
+
+>>>>>>> c6c33223603d94291d1a989b66836d4cd109dce7
 	
 	public Congelar() {}
 	
@@ -43,7 +44,6 @@ public class Congelar {
 		this.fecha_inicio = fecha_inicio;
 		this.fecha_fin = fecha_fin;
 		this.activado = activado;
-		this.padre = padre;
 	}
 
 
@@ -51,16 +51,10 @@ public class Congelar {
 		return conid;
 	}
 
-	public List<Padre> getPadre() {
-		return padre;
-	}
+<<<<<<< HEAD
+=======
 
-
-	public void setPadre(List<Padre> padre) {
-		this.padre = padre;
-	}
-
-
+>>>>>>> c6c33223603d94291d1a989b66836d4cd109dce7
 	public void setConid(int conid) {
 		this.conid = conid;
 	}

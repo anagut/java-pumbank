@@ -22,13 +22,14 @@ public class HijoServlet extends HttpServlet {
 			int hid=Integer.parseInt(id);
 			Hijx hijo = HijoManager.getInstance().getHijo(hid);
 			request.setAttribute("unH", hijo);
-			request.getRequestDispatcher("/hijo.jsp").forward(request, response);
 			
 		} catch (Exception e) {
 			
-			e.printStackTrace();
+			System.out.println("Exception: " + e.getMessage());
+			request.setAttribute("error", "Tu no eres Xadre");
 		}
-		
+		request.getRequestDispatcher("/hijo.jsp").forward(request, response);
+
 	
 	}
 
