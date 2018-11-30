@@ -1,15 +1,16 @@
 package com.pumbank.servlet;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.pumbank.models.Hijx;
 import com.pumbank.models.Padre;
 import com.pumbank.persistance.PadreManager;
-import com.pumbank.models.Hijx;
-import com.pumbank.persistance.HijoManager;
 
 public class PadreServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -29,6 +30,9 @@ public class PadreServlet extends HttpServlet {
 			int pidint = Integer.parseInt(pid);
 			Padre padre = PadreManager.getInstance().getPadre(pidint);
 			request.setAttribute("unP", padre);
+//			List<Hijx> listaHijos = PadreManager.getInstance().dameTodosLosHijxs();
+//			request.setAttribute("hijos", listaHijos);
+		
 
 			
 		} catch (Exception e) {

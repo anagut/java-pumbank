@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="UTF-8"%>
+	
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,21 +29,21 @@
 	
 	<div>${unP.nombre}</div>
 	<ul>
-		<c:forEach var="unHijo" items="${hijos}">
+		<c:forEach var="unHijo" items="${unP.hijos}">
 			<li>
 				<div id="nombre_hijo">${unHijo.nombre}</div>
 				<div id="saldo_hijo">${unHijo.saldo}</div>
 				<div id="red" class="btn-group" role="group"
 					aria-label="Basic example">
-					<a href="./paga?hid=${unHijo.hid}">Paga</a>
+					<a href="./paga?hid=${unHijo.hid}&&pid=${unP.pid}">Paga</a>
 				</div>
 				<div id="red" class="btn-group" role="group"
 					aria-label="Basic example">
-					<a href="./paga?hid=${unHijo.hid}">Transferencia</a>
+					<a href="./paga?hid=${unHijo.hid}&&pid=${unP.pid}">Transferencia</a>
 				</div>
 				<div id="red" class="btn-group" role="group"
 					aria-label="Basic example">
-					<a href="./paga?hid=${unHijo.hid}">Congelar</a>
+					<a href="./paga?hid=${unHijo.hid}&&pid=${unP.pid}">Congelar</a>
 				</div>
 			</li>
 		</c:forEach>
