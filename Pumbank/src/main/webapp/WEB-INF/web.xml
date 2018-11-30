@@ -1,6 +1,7 @@
 <web-app version="3.1">
 	<display-name>Archetype Created Web Application</display-name>
 	<servlet>
+<<<<<<< HEAD
 		<description></description>
 		<servlet-name>HijoServlet</servlet-name>
 		<display-name>HijoServlet</display-name>
@@ -12,22 +13,54 @@
 		<display-name>PadreServlet</display-name>
 		<servlet-name>PadreServlet</servlet-name>
 		<servlet-class>com.pumbank.servlet.PadreServlet</servlet-class>
+=======
+		<description>
+		</description>
+		<display-name>HijoServlet</display-name>
+		<servlet-name>HijoServlet</servlet-name>
+		<servlet-class>com.pumbank.servlet.HijoServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>TransferenciaServlet</display-name>
+		<servlet-name>TransferenciaServlet</servlet-name>
+		<servlet-class>com.pumbank.servlet.TransferenciaServlet
+		</servlet-class>
+>>>>>>> 9cdca97eca53082ea4dcfab2e29f0ecf9b4db636
 	</servlet>
 	<servlet>
 		<display-name>PagaServlet</display-name>
 		<servlet-name>PagaServlet</servlet-name>
 		<servlet-class>com.pumbank.servlet.PagaServlet</servlet-class>
+<<<<<<< HEAD
 	</servlet>
+=======
+
+	</servlet>
+	
+>>>>>>> 9cdca97eca53082ea4dcfab2e29f0ecf9b4db636
 	<servlet-mapping>
 		<servlet-name>HijoServlet</servlet-name>
 		<url-pattern>/hijo</url-pattern>
 	</servlet-mapping>
+<<<<<<< HEAD
 	<servlet-mapping>
 		<servlet-name>PadreServlet</servlet-name>
 		<url-pattern>/padre</url-pattern>
 	</servlet-mapping>
+=======
+
+	<servlet-mapping>
+		<servlet-name>TransferenciaServlet</servlet-name>
+		<url-pattern>/transferencia</url-pattern>
+	</servlet-mapping>
+
+>>>>>>> 9cdca97eca53082ea4dcfab2e29f0ecf9b4db636
 	<servlet-mapping>
 		<servlet-name>PagaServlet</servlet-name>
 		<url-pattern>/paga</url-pattern>
 	</servlet-mapping>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9cdca97eca53082ea4dcfab2e29f0ecf9b4db636
 </web-app>
