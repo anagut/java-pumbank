@@ -52,7 +52,6 @@ public class Padre {
         inverseJoinColumns = { @JoinColumn(name = "hijo") }
     )
 	private List<Hijx> hijos;
-	
 
 	
 	public Padre() {
@@ -72,10 +71,6 @@ public class Padre {
 		this.contraseña = contraseña;
 		this.hijos = hijos;
 	}
-
-
-
-
 
 
 	public List<Hijx> getHijos() {
@@ -151,7 +146,6 @@ public class Padre {
 	public void setContraseña(String contraseña) {
 		this.contraseña = contraseña;
 	}
-	
 
 }
 

@@ -7,6 +7,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import com.pumbank.models.Congelar;
 import com.pumbank.models.Hijx;
 import com.pumbank.models.Padre;
 
@@ -60,6 +61,28 @@ public class HijoManager {
 		session.close();
 
 		
+	}
+	
+	public void updateCongelar(Congelar congelado) {
+		Session session = sf.openSession();
+		Transaction t = session.beginTransaction();
+
+		session.update(congelado);
+
+		t.commit();
+		session.close();
+
+		
+	}
+	
+	public Congelar getCongelar(int id) throws Exception {
+		Session session = sf.openSession();
+
+		Congelar congelado = session.get(Congelar.class, id);
+
+		session.close();
+
+		return congelado;
 	}
 	
 	

@@ -13,13 +13,7 @@
 		<servlet-name>PadreServlet</servlet-name>
 		<servlet-class>com.pumbank.servlet.PadreServlet</servlet-class>
 	</servlet>
-	<servlet>
-		<description>
-		</description>
-		<display-name>HijoServlet</display-name>
-		<servlet-name>HijoServlet</servlet-name>
-		<servlet-class>com.pumbank.servlet.HijoServlet</servlet-class>
-	</servlet>
+
 	<servlet>
 		<display-name>TransferenciaServlet</display-name>
 		<servlet-name>TransferenciaServlet</servlet-name>
@@ -32,6 +26,17 @@
 		<servlet-class>com.pumbank.servlet.PagaServlet</servlet-class>
 	</servlet>
 
+<<<<<<< HEAD
+=======
+	<servlet>
+		<description>
+		</description>
+		<display-name>CongelarServlet</display-name>
+		<servlet-name>CongelarServlet</servlet-name>
+		<servlet-class>com.pumbank.servlet.CongelarServlet</servlet-class>
+	</servlet>
+	
+>>>>>>> c6c33223603d94291d1a989b66836d4cd109dce7
 	<servlet-mapping>
 		<servlet-name>HijoServlet</servlet-name>
 		<url-pattern>/hijo</url-pattern>
@@ -50,6 +55,10 @@
 	<servlet-mapping>
 		<servlet-name>PagaServlet</servlet-name>
 		<url-pattern>/paga</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CongelarServlet</servlet-name>
+		<url-pattern>/congelar</url-pattern>
 	</servlet-mapping>
 
 </web-app>
