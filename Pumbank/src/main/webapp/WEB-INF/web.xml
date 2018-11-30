@@ -10,16 +10,27 @@
   <servlet>
   	<description>
   	</description>
+<<<<<<< HEAD
   	<display-name>PadreServlet</display-name>
   	<servlet-name>PadreServlet</servlet-name>
   	<servlet-class>com.pumbank.servlet.PadreServlet</servlet-class>
+=======
+  	<display-name>PagaServlet</display-name>
+  	<servlet-name>PagaServlet</servlet-name>
+  	<servlet-class>com.pumbank.servlet.PagaServlet</servlet-class>
+>>>>>>> c5c2cd87c9ea5143826f0c88813711c584814f2c
   </servlet>
   <servlet-mapping>
   	<servlet-name>HijoServlet</servlet-name>
   	<url-pattern>/hijo</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
+<<<<<<< HEAD
   	<servlet-name>PadreServlet</servlet-name>
   	<url-pattern>/padre</url-pattern>
+=======
+  	<servlet-name>PagaServlet</servlet-name>
+  	<url-pattern>/paga</url-pattern>
+>>>>>>> c5c2cd87c9ea5143826f0c88813711c584814f2c
   </servlet-mapping>
 </web-app>

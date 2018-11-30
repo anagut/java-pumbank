@@ -1,15 +1,7 @@
 package com.pumbank.models;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -17,60 +9,20 @@ import javax.persistence.Table;
 
 public class Paga {
 	
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int pdig;
-	
-	@Column(name="saldo")
-	private int saldo;
+	@Column(name="cantidad")
+	private int cantidad;
 	
 	@Column(name="frecuencia_dias")
 	private int frecuencia_dias;
 	
-	@ManyToMany(mappedBy = "pagas")
-	private List<Padre> padre;
+	@Column(name="padre")
+	private int pid;
+	
+	@Column(name="hijo")
+	private int hid;
 	
 	public Paga() {}
 
-	public Paga(int pdig, int saldo, int frecuencia_dias, List<Padre> padre) {
-		super();
-		this.pdig = pdig;
-		this.saldo = saldo;
-		this.frecuencia_dias = frecuencia_dias;
-		this.padre = padre;
-	}
-
-	public int getPdig() {
-		return pdig;
-	}
-
-	public List<Padre> getPadre() {
-		return padre;
-	}
-
-	public void setPadre(List<Padre> padre) {
-		this.padre = padre;
-	}
-
-	public void setPdig(int pdig) {
-		this.pdig = pdig;
-	}
-
-	public int getSaldo() {
-		return saldo;
-	}
-
-	public void setSaldo(int saldo) {
-		this.saldo = saldo;
-	}
-
-	public int getFrecuencia_dias() {
-		return frecuencia_dias;
-	}
-
-	public void setFrecuencia_dias(int frecuencia_dias) {
-		this.frecuencia_dias = frecuencia_dias;
-	}
 	
 
 }
