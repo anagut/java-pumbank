@@ -7,8 +7,19 @@
   	<servlet-name>HijoServlet</servlet-name>
   	<servlet-class>com.pumbank.servlet.HijoServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>PagaServlet</display-name>
+  	<servlet-name>PagaServlet</servlet-name>
+  	<servlet-class>com.pumbank.servlet.PagaServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>HijoServlet</servlet-name>
   	<url-pattern>/hijo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PagaServlet</servlet-name>
+  	<url-pattern>/paga</url-pattern>
   </servlet-mapping>
 </web-app>
