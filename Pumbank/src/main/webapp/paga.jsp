@@ -20,7 +20,8 @@
 		<label>€</label>
 	</div>
 	<div>
-		<label>Frecuencia</label> <select required>
+		<label>Frecuencia</label> 
+		<select required name="frecuencia">
 			<option value="" disabled selected></option>
 			<option value="7">Cada semana</option>
 			<option value="15">Cada 15 días</option>

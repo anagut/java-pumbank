@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.pumbank.models.Hijx;
 import com.pumbank.models.Paga;
 import com.pumbank.persistance.HijoManager;
+import com.pumbank.persistance.PagaManager;
 
 public class PagaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -32,14 +33,28 @@ public class PagaServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
+		String hidrecibido = request.getParameter("hid");
+		int hidrec = Integer.parseInt(hidrecibido);
+		
 		String cantidadrec = request.getParameter("cantidad");
-		String frecuenciarec = request.getParameter("");
+		String frecuenciarec = request.getParameter("frecuencia");
+		System.out.println("la puta frecuencia es"+frecuenciarec);
 		
 		double cantidad = Double.parseDouble(cantidadrec);
-		int frecuencia = Integer.getInteger(frecuenciarec);
+		int frecuencia = Integer.parseInt(frecuenciarec);
+		
+		int pid = 1; //esto se haría cogiendo el pid desde sesión
 		
 		Paga unaPaga = new Paga(0, cantidad, frecuencia, pid, hidrec);
-
+		
+		try {
+			PagaManager.getInstance().createPaga(unaPaga);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+		}
+	
 		doGet(request, response);
 	}
 

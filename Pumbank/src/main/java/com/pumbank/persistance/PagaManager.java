@@ -24,7 +24,7 @@ public class PagaManager {
 	}
 	
 	public int createPaga(Paga unaPaga) throws Exception {
-		if(unaPaga==null) return 0;
+//		if(unaPaga==null) return 0;
 		
 		Session session = sf.openSession();
 		Transaction t = session.beginTransaction();
@@ -37,5 +37,5 @@ public class PagaManager {
 		return pgid;
 	}
 	
-	
+
 }
