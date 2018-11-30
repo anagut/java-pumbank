@@ -31,20 +31,20 @@ public class PadreManager {
 
 		Padre recP = session.get(Padre.class, pid);
 
-		session.close();
+		//session.close();
 
 		return recP;
 	}
 	
-	public List<Hijx> dameTodosLosHijxs() throws Exception {
-		List<Hijx> hijxs=null;
-		
-		Session session = sf.openSession();
-		
-		hijxs = session.createQuery("FROM Hijxs WHERE pid=?").list();
-		
-		session.close();
-		return hijxs;
-	}
+//	public List<Hijx> dameTodosLosHijxs() throws Exception {
+//		List<Hijx> hijxs=null;
+//		
+//		Session session = sf.openSession();
+//		
+//		hijxs = session.createQuery("FROM Hijxs WHERE pid=?").list();
+//		
+//		session.close();
+//		return hijxs;
+//	}
 
 }

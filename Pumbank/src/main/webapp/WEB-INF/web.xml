@@ -31,10 +31,7 @@
 		<servlet-name>PagaServlet</servlet-name>
 		<servlet-class>com.pumbank.servlet.PagaServlet</servlet-class>
 	</servlet>
-<<<<<<< HEAD
 
-=======
->>>>>>> 9777e7d4d0fcbe5e3b2047fa16918223f23667d9
 	<servlet-mapping>
 		<servlet-name>HijoServlet</servlet-name>
 		<url-pattern>/hijo</url-pattern>

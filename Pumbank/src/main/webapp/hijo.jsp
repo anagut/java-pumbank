@@ -21,6 +21,7 @@
     <header>
         <div>
             <a href="#">
+            	<div class="error">${error}</div>
                 <h1 id="name">${unH.nombre}</h1>
             </a>
         </div>

@@ -60,7 +60,7 @@ public class Padre {
 
 
 	public Padre(int pid, String nombre, String apellidos, Date fecha_nacimiento, String tarjeta_credito, int cvv,
-			String email, String contraseña, List<Hijx> hijos, List<Paga> pagas, List<Congelar> congelada) {
+			String email, String contraseña, List<Hijx> hijos) {
 		super();
 		this.pid = pid;
 		this.nombre = nombre;
