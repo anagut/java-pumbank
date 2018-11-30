@@ -9,22 +9,15 @@ import javax.servlet.http.HttpServletResponse;
 import com.pumbank.models.Hijx;
 import com.pumbank.persistance.HijoManager;
 
-
 public class PagaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
 
-    public PagaServlet() {
-        super();
- 
-    }
-
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		String hidrecibido = request.getParameter("hid");
 		int hidrec = Integer.parseInt(hidrecibido);
-		
+
 		try {
 			Hijx elhijo = HijoManager.getInstance().getHijo(hidrec);
 			request.setAttribute("elHijo", elhijo);
@@ -32,11 +25,11 @@ public class PagaServlet extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println(e.getMessage());
-		} 
+		}
 	}
 
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		doGet(request, response);
 	}
