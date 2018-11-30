@@ -19,6 +19,13 @@
 		<servlet-class>com.pumbank.servlet.PagaServlet</servlet-class>
 
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>CongelarServlet</display-name>
+		<servlet-name>CongelarServlet</servlet-name>
+		<servlet-class>com.pumbank.servlet.CongelarServlet</servlet-class>
+	</servlet>
 	
 	<servlet-mapping>
 		<servlet-name>HijoServlet</servlet-name>
@@ -33,6 +40,10 @@
 	<servlet-mapping>
 		<servlet-name>PagaServlet</servlet-name>
 		<url-pattern>/paga</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CongelarServlet</servlet-name>
+		<url-pattern>/congelar</url-pattern>
 	</servlet-mapping>
 
 </web-app>

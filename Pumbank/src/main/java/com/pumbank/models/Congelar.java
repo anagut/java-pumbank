@@ -30,9 +30,7 @@ public class Congelar {
 	
 	@Column(name="activado")
 	private boolean activado;
-	
-	@ManyToMany(mappedBy = "congelada")
-	private List<Padre> padre;
+
 	
 	public Congelar() {}
 	
@@ -43,21 +41,11 @@ public class Congelar {
 		this.fecha_inicio = fecha_inicio;
 		this.fecha_fin = fecha_fin;
 		this.activado = activado;
-		this.padre = padre;
 	}
 
 
 	public int getConid() {
 		return conid;
-	}
-
-	public List<Padre> getPadre() {
-		return padre;
-	}
-
-
-	public void setPadre(List<Padre> padre) {
-		this.padre = padre;
 	}
 
 
