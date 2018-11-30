@@ -9,12 +9,6 @@
     <session-factory>
         <property name="hbm2ddl.auto">update</property>
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
-        <property name="connection.url">jdbc:oracle:thin:@localhost/pumbank</property>
-        <property name="connection.username">user</property>
-        <property name="connection.password">eu123</property>
-        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-    <mapping resource="user.hbm.xml"/>
-
         <property name="connection.url">jdbc:mysql://localhost/pumbank</property>
         <property name="connection.username">user</property>
         <property name="connection.password">eu123</property>
