@@ -15,9 +15,7 @@ import com.pumbank.models.Congelar;
 import com.pumbank.models.Hijx;
 import com.pumbank.persistance.HijoManager;
 
-/**
- * Servlet implementation class CongelarServlet
- */
+
 public class CongelarServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -41,14 +39,12 @@ public class CongelarServlet extends HttpServlet {
 		
 		String fecha_inicio = request.getParameter("fecha_inicio");
 		String fecha_fin = request.getParameter("fecha_fin");
-		String id = request.getParameter("conid");
-		
+			
 		System.out.println("Fechas:" + fecha_inicio + fecha_fin);
 		
 		try {
 
-			int conid = Integer.parseInt(id);
-			
+				
 						
 			DateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
 			Date fecha_inicio_D = format.parse(fecha_inicio);
@@ -58,13 +54,13 @@ public class CongelarServlet extends HttpServlet {
 			System.out.println(fecha_fin_D);
 			
 
-			Congelar congelado = HijoManager.getInstance().getCongelar(conid);
+			Congelar congelado = new Congelar();
 
 			congelado.setFecha_inicio(fecha_inicio_D);
 			
 			congelado.setFecha_fin(fecha_fin_D);
 
-			HijoManager.getInstance().updateCongelar(congelado);
+			HijoManager.getInstance().createCongelar(congelado);
 
 			request.setAttribute("daleCongelado", congelado);
 			request.setAttribute("mensaje", "Your account has been freeze");

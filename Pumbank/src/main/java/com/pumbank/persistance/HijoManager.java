@@ -84,6 +84,18 @@ public class HijoManager {
 
 		return congelado;
 	}
-	
+	public int createCongelar(Congelar congelado) throws Exception {
+		if(congelado==null) return 0;
+		
+		Session session = sf.openSession();
+		Transaction t = session.beginTransaction();
+
+		int id = ((Integer) session.save(congelado)).intValue();
+
+		t.commit();
+		session.close();
+
+		return id;
+	}
 	
 }
