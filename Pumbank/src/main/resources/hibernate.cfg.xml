@@ -9,7 +9,10 @@
     <session-factory>
         <property name="hbm2ddl.auto">update</property>
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 070e2edffc5ed9f8c05620f74ca5d677cedaa2d3
         <property name="connection.url">jdbc:mysql://localhost/pumbank</property>
         <property name="connection.username">user</property>
         <property name="connection.password">eu123</property>
