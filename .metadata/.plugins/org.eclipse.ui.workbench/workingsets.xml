@@ -8,5 +8,9 @@
 <item elementID="=Pumbank/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1543480534359_2" label="Window Working Set" name="Aggregate for window 1543480534359"/>
+<<<<<<< HEAD
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1543565251634_3" label="Window Working Set" name="Aggregate for window 1543565251634"/>
+=======
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1543565268405_3" label="Window Working Set" name="Aggregate for window 1543565268405"/>
+>>>>>>> 57a2b54058d3602be11171a0d302cc3de7bf5959
 </workingSetManager>
