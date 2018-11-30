@@ -1,36 +1,38 @@
 <web-app version="3.1">
-  <display-name>Archetype Created Web Application</display-name>
-  <servlet>
-  	<description>
-  	</description>
-  	<display-name>HijoServlet</display-name>
-  	<servlet-name>HijoServlet</servlet-name>
-  	<servlet-class>com.pumbank.servlet.HijoServlet</servlet-class>
-  </servlet>
-  <servlet>
-  	<description>
-  	</description>
-<<<<<<< HEAD
-  	<display-name>TransferenciaServlet</display-name>
-  	<servlet-name>TransferenciaServlet</servlet-name>
-  	<servlet-class>com.pumbank.servlet.TransferenciaServlet</servlet-class>
-=======
-  	<display-name>PagaServlet</display-name>
-  	<servlet-name>PagaServlet</servlet-name>
-  	<servlet-class>com.pumbank.servlet.PagaServlet</servlet-class>
->>>>>>> c5c2cd87c9ea5143826f0c88813711c584814f2c
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>HijoServlet</servlet-name>
-  	<url-pattern>/hijo</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-<<<<<<< HEAD
-  	<servlet-name>TransferenciaServlet</servlet-name>
-  	<url-pattern>/transferencia</url-pattern>
-=======
-  	<servlet-name>PagaServlet</servlet-name>
-  	<url-pattern>/paga</url-pattern>
->>>>>>> c5c2cd87c9ea5143826f0c88813711c584814f2c
-  </servlet-mapping>
+	<display-name>Archetype Created Web Application</display-name>
+	<servlet>
+		<description>
+		</description>
+		<display-name>HijoServlet</display-name>
+		<servlet-name>HijoServlet</servlet-name>
+		<servlet-class>com.pumbank.servlet.HijoServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>TransferenciaServlet</display-name>
+		<servlet-name>TransferenciaServlet</servlet-name>
+		<servlet-class>com.pumbank.servlet.TransferenciaServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>PagaServlet</display-name>
+		<servlet-name>PagaServlet</servlet-name>
+		<servlet-class>com.pumbank.servlet.PagaServlet</servlet-class>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HijoServlet</servlet-name>
+		<url-pattern>/hijo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+
+
+		<servlet-name>TransferenciaServlet</servlet-name>
+		<url-pattern>/transferencia</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PagaServlet</servlet-name>
+		<url-pattern>/paga</url-pattern>
+	</servlet-mapping>
 </web-app>
