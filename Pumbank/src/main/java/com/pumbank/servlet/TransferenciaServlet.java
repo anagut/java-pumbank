@@ -17,7 +17,6 @@ public class TransferenciaServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-
 		String id = request.getParameter("hid");
 
 		try {
@@ -39,16 +38,16 @@ public class TransferenciaServlet extends HttpServlet {
 		String id = request.getParameter("hid");
 
 		try {
-			
+
 			int hid = Integer.parseInt(id);
 			Double saldoDouble = (saldo != null && !saldo.equals("")) ? Double.parseDouble(saldo) : 0;
 
 			Hijx unHijo = HijoManager.getInstance().getHijo(hid);
-			
+
 			unHijo.setSaldoMas(saldoDouble);
-				
+
 			HijoManager.getInstance().updateHijo(unHijo);
-			 
+
 			request.setAttribute("saldoHijo", unHijo);
 			request.setAttribute("mensaje", "Saldo cambiado!");
 		} catch (Exception e) {
