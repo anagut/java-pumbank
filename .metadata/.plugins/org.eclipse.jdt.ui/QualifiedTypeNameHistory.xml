@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<<<<<<< HEAD
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.pumbank.servlet.HijoServlet"/>
-<fullyQualifiedTypeName name="com.pumbank.models.Hijx"/>
-<fullyQualifiedTypeName name="com.pumbank.persistance.HijoManager"/>
-<fullyQualifiedTypeName name="java.lang.Double"/>
-<fullyQualifiedTypeName name="org.hibernate.Query"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="org.apache.jasper.tagplugins.jstl.core.ForEach"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.pumbank.models.Paga"/>
-<fullyQualifiedTypeName name="com.pumbank.persistance.PagaManager"/>
+<fullyQualifiedTypeName name="com.pumbank.persistance.PadreManager"/>
+<fullyQualifiedTypeName name="com.pumbank.models.Padre"/>
 </qualifiedTypeNameHistroy>
-=======
-<qualifiedTypeNameHistroy/>
->>>>>>> ce95720ff1d529ca4d41358bd26e25ff9cc1699b

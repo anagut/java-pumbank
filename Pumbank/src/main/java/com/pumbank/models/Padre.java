@@ -42,7 +42,7 @@ public class Padre {
 	@Column(name="email")
 	private String email;
 	
-	@Column(name="contraseña")
+	@Column(name="password")
 	private String contraseña;
 	
 	@ManyToMany(cascade = { CascadeType.ALL })

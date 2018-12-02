@@ -64,7 +64,7 @@ a:hover{text-decoration: none;}
 #mes{
     width: 3em;
 }
-#año{
+#year{
     width: 3em;
 }
 
@@ -72,10 +72,12 @@ a:hover{text-decoration: none;}
     width: 3em;
 }
 
-#cadi{
-    align-content: center;
-    position: absolute;
-    margin-left: -250px;
+#cantidad{
+    width: 5em;
+}
+
+#nombre{
+    width: 8em;
 }
 
 .error{
@@ -86,6 +88,9 @@ a:hover{text-decoration: none;}
 h2{font-size: 40px;
 padding: 5% 0%;}
 
+.botones{
+	margin-top: 5%;
+}
 
 
 /* @media screen and (min-width:560px){
