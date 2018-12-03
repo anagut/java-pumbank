@@ -1,16 +1,10 @@
 INDEX VERSION 1.4+C:\Alvaro\java-pumbank\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-2266472383.index
-2031938376.index
-2130092576.index
 2600604506.index
-585630123.index
-<<<<<<< HEAD
-2970722902.index
-1504782725.index
-2414013600.index
-=======
->>>>>>> ce95720ff1d529ca4d41358bd26e25ff9cc1699b
-1865737074.index
+2130092576.index
 2758537017.index
-4196403476.index
 617079774.index
+2031938376.index
+4196403476.index
+585630123.index
+2266472383.index
+1865737074.index
