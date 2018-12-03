@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="UTF-8"%>
-	
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
@@ -20,34 +20,58 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<header>
-		<div id="logo">
-			<div class="error">${error}</div>
+	<div id="fondo" class="row">
+		<header>
+			<div id="boton">
+				<!-- aqui esta el boton de la bellota -->
+				<div class="btn-group dropright">
+					<button type="button" class="btn-btn-secondary-dropdown-toggle"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<img class="bellota" src="./imgs/Bellota-Kawaii-83631.gif" alt="">
+
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="./pumbanking.html">Pumbanking</a> <a
+							class="dropdown-item" href="./control_parental.html">Control
+							parental</a> <a class="dropdown-item" href="./paga-global.html">Paga</a>
+						<a class="dropdown-item" href="./transferencia-global.html">Transferencia</a>
+						<a class="dropdown-item" href="#">Ajustes</a>
+					</div>
+					<div class="dropdown-menu">
+						<!-- Dropdown menu links -->
+					</div>
+				</div>
+			</div>
+			<div id="logo">
+				<div class="error">${error}</div>
 				<h1 id=name>${unP.nombre}</h1>
-		</div>
-	</header>
-	
-	<div>${unP.nombre}</div>
-	<ul>
-		<c:forEach var="unHijo" items="${unP.hijos}">
-			<li>
-				<div id="nombre_hijo">${unHijo.nombre}</div>
-				<div id="saldo_hijo">${unHijo.saldo}</div>
-				<div id="red" class="btn-group" role="group"
-					aria-label="Basic example">
-					<a href="./paga?hid=${unHijo.hid}&&pid=${unP.pid}">Paga</a>
-				</div>
-				<div id="red" class="btn-group" role="group"
-					aria-label="Basic example">
-					<a href="./paga?hid=${unHijo.hid}&&pid=${unP.pid}">Transferencia</a>
-				</div>
-				<div id="red" class="btn-group" role="group"
-					aria-label="Basic example">
-					<a href="./paga?hid=${unHijo.hid}&&pid=${unP.pid}">Congelar</a>
-				</div>
-			</li>
-		</c:forEach>
-	</ul>
+			</div>
+		</header>
+
+		<ul id="list">
+			<c:forEach var="unHijo" items="${unP.hijos}">
+				<li>
+					<div id="nombre_hijo">${unHijo.nombre}</div>
+					<div id="saldo_hijo">Saldo: ${unHijo.saldo} Euros</div>
+
+					<div class="btn-group" role="group" aria-label="Basic example">
+						<div id="yellow" type="button" class="btn btn-group" role="group"
+							aria-label="Basic example">
+							<a href="./paga?hid=${unHijo.hid}&&pid=${unP.pid}">Paga</a>
+						</div>
+						<div id="red" type="button" class="btn btn-group" role="group"
+							aria-label="Basic example">
+							<a href="./paga?hid=${unHijo.hid}&&pid=${unP.pid}">Transferencia</a>
+						</div>
+						<div id="blue" type="button" class="btn btn-group" role="group"
+							aria-label="Basic example">
+							<a href="./paga?hid=${unHijo.hid}&&pid=${unP.pid}">Congelar</a>
+						</div>
+					</div>
+				</li>
+			</c:forEach>
+		</ul>
+	</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

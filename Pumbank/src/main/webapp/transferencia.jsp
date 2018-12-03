@@ -19,48 +19,111 @@
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
 
-<link rel="stylesheet" href="./css/transferencias_style.css">
+<!-- <link rel="stylesheet" href="./css/transferencias_style.css"> -->
+<link rel="stylesheet" href="./css/admin-paga_style.css">
 
 </head>
 
 <body>
 	<div>
 		<header>
-			<div>
-				<a href="./hijo">
-					<div id=name>hola</div>
+			<div id="menulateral">
+				<!-- aqui esta el boton de la bellota -->
+				<div class="btn-group dropright">
+					<button type="button" class="btn-btn-secondary-dropdown-toggle"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<img class="bellota" src="./imgs/Bellota-Kawaii-83631.gif" alt="">
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="#">Pumbanking</a> <a
+							class="dropdown-item" href="#">Control parental</a> <a
+							class="dropdown-item" href="#">Paga</a> <a class="dropdown-item"
+							href="#">Transferencia</a> <a class="dropdown-item" href="#">Ajustes</a>
+					</div>
+					<div class="dropdown-menu">Dropdown menu links</div>
+				</div>
+			</div>
+			<div id="logo">
+				<a href="./homepage_sr.html">
+					<h1 id=name>${elPadre.nombre}</h1>
 				</a>
 			</div>
 		</header>
 
-		<form method="POST" action="#">
-			<h1 name="hid">Transferencia</h1>
+		<section>
+			<div>
 
-			<div>${mensaje}</div>
-			<div class="row" id=money>
-				<div class="col-6">Saldo</div>
-				<input class="col-4" type="number" min="0.1" max="50" step="0.1"
-					name="saldo" required>
-				<div class="col-1">€</div>
-			</div>
-			<div class="row" id="footer">
-				<div class="col-6" id="confirmar">
-					<button type="submit" id="boton">Confirmar</button>
-				</div>
-				<div class="col-6" id="cancelar">
-					<button type="reset" id="boton">Cancelar</button>
-				</div>
-			</div>
-		</form>
+				<h1 name="hid">Transferencia</h1>
 
+				<form method="POST" action="#">
+
+
+					<div>${mensaje}</div>
+
+					<div>
+						<label>Usuario</label> <input name="nombre" id="nombre"
+							value="${unH.nombre}" required readonly="readonly">
+					</div>
+
+					<div class="row" id=money>
+						<label>Cantidad</label> <input class="col-4" type="number"
+							min="0.1" max="50" step="0.1" name="saldo" required> <label>€</label>
+					</div>
+
+					<div class="row">
+						<div id="datosbancarios">
+							<label for="datosbancarios">Datos bancarios</label>
+						</div>
+						<div class="row">
+							<div>
+								<label class="col-5" for="tarjeta">Nº de tarjeta</label> <input
+									id="datosbanc" class="col-4" type="text" minlength="16"
+									maxlength="18" name="datosbanc" required
+									value="${elPadre.tarjeta_credito}" readonly="readonly">
+
+							</div>
+							<div>
+								<label for="CVV" class="col-5">CVV</label> <input id="CVV"
+									name="CVV" class="noflechas" type="password" minlength="3"
+									maxlength="3" required value="${elPadre.cvv}" readonly="readonly">
+
+							</div>
+
+							<div id="caducidad">
+
+
+								<label>Caducidad</label> <input id="mes" name="mes"
+									class="noflechas" type="number" required
+									value="${elPadre.mes_caducidad}" readonly="readonly"> <input id="year"
+									name="year" type="number" class="noflechas"
+									value="${elPadre.año_caducidad}" readonly="readonly">
+
+
+							</div>
+
+
+							<div class="botones">
+								<button id="accederbtn">Cofirmar</button>
+								<button id="cancelarbtn">Cancelar</button>
+							</div>
+				</form>
+			</div>
+		</section>
 	</div>
-
-
 </body>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	crossorigin="anonymous"></script>
 <script
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
 	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 	crossorigin="anonymous"></script>
+
+<script src="./js/admin-paga_script.js"></script>
 
 </html>

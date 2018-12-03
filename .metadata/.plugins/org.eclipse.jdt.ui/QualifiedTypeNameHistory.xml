@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
+<qualifiedTypeNameHistroy/>
+=======
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="org.apache.jasper.tagplugins.jstl.core.ForEach"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
@@ -13,3 +16,4 @@
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="com.pumbank.models.Congelar"/>
 </qualifiedTypeNameHistroy>
+>>>>>>> 446ee4a24eaf78ae2aeb00441d3b3f423fb26c22

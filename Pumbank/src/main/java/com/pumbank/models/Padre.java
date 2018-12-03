@@ -14,52 +14,66 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
-
 @Entity
-@Table(name="padre")
+@Table(name = "padre")
 
 public class Padre {
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int pid;
-	
-	@Column(name="nombre")
+
+	@Column(name = "nombre")
 	private String nombre;
-	
-	@Column(name="apellidos")
+
+	@Column(name = "apellidos")
 	private String apellidos;
-	
-	@Column(name="fecha_nacimiento")
+
+	@Column(name = "fecha_nacimiento")
 	private Date fecha_nacimiento;
-	
-	@Column(name="tarjeta_credito")
+
+	@Column(name = "tarjeta_credito")
 	private String tarjeta_credito;
-	
-	@Column(name="cvv")
+
+	@Column(name = "cvv")
 	private int cvv;
-	
-	@Column(name="email")
+
+	@Column(name = "email")
 	private String email;
-	
-	@Column(name="password")
+
+	@Column(name = "password")
 	private String contraseña;
-	
+
+	@Column(name = "mes_caducidad")
+	private int mes_caducidad;
+
+	@Column(name = "año_caducidad")
+	private int año_caducidad;
+
 	@ManyToMany(cascade = { CascadeType.ALL })
-    @JoinTable(
-        name = "padre_hijo_rel", 
-        joinColumns = { @JoinColumn(name = "padre") }, 
-        inverseJoinColumns = { @JoinColumn(name = "hijo") }
-    )
+	@JoinTable(name = "padre_hijo_rel", joinColumns = { @JoinColumn(name = "padre") }, inverseJoinColumns = {
+			@JoinColumn(name = "hijo") })
 	private List<Hijx> hijos;
 
-	
 	public Padre() {
 	}
 
+//	public Padre(int pid, String nombre, String apellidos, Date fecha_nacimiento, String tarjeta_credito, int cvv,
+//			String email, String contraseña, List<Hijx> hijos) {
+//		super();
+//		this.pid = pid;
+//		this.nombre = nombre;
+//		this.apellidos = apellidos;
+//		this.fecha_nacimiento = fecha_nacimiento;
+//		this.tarjeta_credito = tarjeta_credito;
+//		this.cvv = cvv;
+//		this.email = email;
+//		this.contraseña = contraseña;
+//		this.hijos = hijos;
+//	}
 
 	public Padre(int pid, String nombre, String apellidos, Date fecha_nacimiento, String tarjeta_credito, int cvv,
-			String email, String contraseña, List<Hijx> hijos) {
+			String email, String contraseña, int mes_caducidad, int año_caducidad, List<Hijx> hijos) {
 		super();
 		this.pid = pid;
 		this.nombre = nombre;
@@ -69,9 +83,10 @@ public class Padre {
 		this.cvv = cvv;
 		this.email = email;
 		this.contraseña = contraseña;
+		this.mes_caducidad = mes_caducidad;
+		this.año_caducidad = año_caducidad;
 		this.hijos = hijos;
 	}
-
 
 	public List<Hijx> getHijos() {
 		return hijos;
@@ -80,7 +95,6 @@ public class Padre {
 	public void setHijos(List<Hijx> hijos) {
 		this.hijos = hijos;
 	}
-
 
 	public int getPid() {
 		return pid;
@@ -130,7 +144,6 @@ public class Padre {
 		this.cvv = cvv;
 	}
 
-
 	public String getEmail() {
 		return email;
 	}
@@ -147,5 +160,20 @@ public class Padre {
 		this.contraseña = contraseña;
 	}
 
-}
+	public int getMes_caducidad() {
+		return mes_caducidad;
+	}
 
+	public void setMes_caducidad(int mes_caducidad) {
+		this.mes_caducidad = mes_caducidad;
+	}
+
+	public int getAño_caducidad() {
+		return año_caducidad;
+	}
+
+	public void setAño_caducidad(int año_caducidad) {
+		this.año_caducidad = año_caducidad;
+	}
+
+}
