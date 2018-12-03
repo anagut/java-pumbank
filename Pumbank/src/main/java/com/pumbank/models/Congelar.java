@@ -15,6 +15,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="congelar")
+//@Table(name="congelarcuenta")
 
 public class Congelar {
 
@@ -30,6 +31,12 @@ public class Congelar {
 	
 	@Column(name="activado")
 	private boolean activado;
+	
+	@Column(name="padre")
+	private int pid;
+	
+	@Column(name="hijo")
+	private int hid;
 
 	public Congelar() {}
 	

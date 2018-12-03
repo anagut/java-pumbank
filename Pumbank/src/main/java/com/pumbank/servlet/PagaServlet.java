@@ -1,14 +1,19 @@
 package com.pumbank.servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.pumbank.models.Hijx;
+import com.pumbank.models.Padre;
 import com.pumbank.models.Paga;
 import com.pumbank.persistance.HijoManager;
+import com.pumbank.persistance.PadreManager;
 import com.pumbank.persistance.PagaManager;
 
 public class PagaServlet extends HttpServlet {
@@ -17,13 +22,33 @@ public class PagaServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+//		String pidrecibido = request.getParameter("pid");
+//		int pidrec = Integer.parseInt(pidrecibido);
+		int pidrec = 1;
+			
 		String hidrecibido = request.getParameter("hid");
 		int hidrec = Integer.parseInt(hidrecibido);
-
+		
 		try {
-			Hijx elhijo = HijoManager.getInstance().getHijo(hidrec);
-			request.setAttribute("elHijo", elhijo);
-			request.getRequestDispatcher("/paga.jsp").forward(request, response);
+			Padre padre = PadreManager.getInstance().getPadre(pidrec);
+			request.setAttribute("elPadre", padre);
+			
+			Paga pagaExistente = PagaManager.getInstance().existePaga(hidrec);
+			
+			if (pagaExistente != null) {
+
+				Hijx elhijo = HijoManager.getInstance().getHijo(hidrec);
+				request.setAttribute("elHijo", elhijo);
+				request.setAttribute("laPaga", pagaExistente);
+				request.getRequestDispatcher("/paga.jsp").forward(request, response);
+			}else {
+				Hijx elhijo = HijoManager.getInstance().getHijo(hidrec);
+				request.setAttribute("elHijo", elhijo);
+				request.getRequestDispatcher("/paga.jsp").forward(request, response);
+			}
+					
+
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println(e.getMessage());
@@ -36,19 +61,35 @@ public class PagaServlet extends HttpServlet {
 		String hidrecibido = request.getParameter("hid");
 		int hidrec = Integer.parseInt(hidrecibido);
 		
-		String cantidadrec = request.getParameter("cantidad");
-		String frecuenciarec = request.getParameter("frecuencia");
-		System.out.println("la puta frecuencia es"+frecuenciarec);
+		String pgidrecibido = request.getParameter("pgid");
+		int pgidrec = (pgidrecibido!=null && !pgidrecibido.equals(""))?Integer.parseInt(pgidrecibido):0;
 		
+		String cantidadrec = request.getParameter("cantidad");
 		double cantidad = Double.parseDouble(cantidadrec);
+		
+		String frecuenciarec = request.getParameter("frecuencia");
 		int frecuencia = Integer.parseInt(frecuenciarec);
 		
+	
 		int pid = 1; //esto se haría cogiendo el pid desde sesión
 		
-		Paga unaPaga = new Paga(0, cantidad, frecuencia, pid, hidrec);
-		
+
 		try {
-			PagaManager.getInstance().createPaga(unaPaga);
+			Paga unaPaga = new Paga(pgidrec, cantidad, frecuencia, pid, hidrec);
+			
+			if (pgidrec == 0) {
+				
+				
+				System.out.println(unaPaga);
+				
+				PagaManager.getInstance().createPaga(unaPaga);
+			}else {
+				PagaManager.getInstance().updatePaga(unaPaga);
+				
+			}
+			
+			
+			
 			
 		} catch (Exception e) {
 			e.printStackTrace();

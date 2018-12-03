@@ -19,7 +19,7 @@ public class Paga {
 	@Column(name="cantidad")
 	private double cantidad;
 	
-	@Column(name="frecuencia_dias")
+	@Column(name="frecuencia")
 	private int frecuencia_dias;
 	
 	@Column(name="padre")
