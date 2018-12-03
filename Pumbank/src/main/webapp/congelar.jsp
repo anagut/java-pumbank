@@ -49,6 +49,7 @@
                     <h1 id=name>RICARDO SR</h1>
                 </a>
             </div>
+           
         </header>
         <section>
             <div><a href="#">Saldo <p class="derecha">${unH.saldo}</p></a>
@@ -58,6 +59,7 @@
                     </div>
                     <div>
                         <form action="" method="POST" id="congelarniño" novalidate>
+                        <div>${mensaje}</div>
                             <div>
                                 <div id="nombre_niño_error" class="error esconder">*Debe el nombre del usuario al que desea congelar la cuenta.</div>
                             </div>
@@ -76,8 +78,9 @@
 
                             <div>
                                 <button type="submit" id="confirmar_congelar">Confirmar</button>
-                                <button type="reset" id="cancelar_congelar">Cancelar</button>
+         
                             </div>
+                             
                         </form>
 
 

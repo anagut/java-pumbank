@@ -14,49 +14,67 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="congelar")
-//@Table(name="congelarcuenta")
+
+@Table(name="congelarcuenta")
 
 public class Congelar {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int conid;
+	private int cid;
 	
 	@Column(name="fecha_inicio")
 	private Date fecha_inicio;
 	
 	@Column(name="fecha_fin")
 	private Date fecha_fin;
-	
-	@Column(name="activado")
-	private boolean activado;
-	
+		
 	@Column(name="padre")
 	private int pid;
 	
 	@Column(name="hijo")
 	private int hid;
 
-	public Congelar() {}
-	
-	
-	public Congelar(int conid, Date fecha_inicio, Date fecha_fin, boolean activado, List<Padre> padre) {
+
+
+	public Congelar() {	}
+
+
+
+	public Congelar(int cid, Date fecha_inicio, Date fecha_fin, int pid, int hid) {
 		super();
-		this.conid = conid;
+		this.cid = cid;
 		this.fecha_inicio = fecha_inicio;
 		this.fecha_fin = fecha_fin;
-		this.activado = activado;
+		this.pid = pid;
+		this.hid = hid;
 	}
 
 
-	public int getConid() {
-		return conid;
+
+	public int getPid() {
+			return pid;
+		}
+
+		public void setPid(int pid) {
+			this.pid = pid;
+		}
+
+		public int getHid() {
+			return hid;
+		}
+
+		public void setHid(int hid) {
+			this.hid = hid;
+		}
+
+	public int getCid() {
+		return cid;
 	}
 
 
-	public void setConid(int conid) {
-		this.conid = conid;
+	public void setConid(int cid) {
+		this.cid = cid;
 	}
 
 	public Date getFecha_inicio() {
@@ -75,13 +93,6 @@ public class Congelar {
 		this.fecha_fin = fecha_fin;
 	}
 
-	public boolean isActivado() {
-		return activado;
-	}
-
-	public void setActivado(boolean activado) {
-		this.activado = activado;
-	}
 
 
 	

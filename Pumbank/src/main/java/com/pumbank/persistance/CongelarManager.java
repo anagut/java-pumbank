@@ -1,42 +1,29 @@
 package com.pumbank.persistance;
 
-import java.util.List;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import com.pumbank.models.Congelar;
-import com.pumbank.models.Hijx;
-import com.pumbank.models.Padre;
 
-
-public class PadreManager {
+public class CongelarManager {
 	
-	private static PadreManager instancia = null;
+	
+	private static CongelarManager instance = null;
 	private static SessionFactory sf = null;
 
-	public static PadreManager getInstance() throws Exception {
-		if (instancia == null)
-			instancia = new PadreManager();
+	public static CongelarManager getInstance() throws Exception {
+		if (instance == null)
+			instance = new CongelarManager();
 
-		return instancia;
+		return instance;
 	}
 	
-	private PadreManager() throws Exception {
+	private CongelarManager() throws Exception {
 		sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 	}
 	
-	public Padre getPadre(int pid) throws Exception {
-		Session session = sf.openSession();
-
-		Padre recP = session.get(Padre.class, pid);
-
-		//session.close();
-
-		return recP;
-	}
 	
 	public void updateCongelar(Congelar congelado) {
 		Session session = sf.openSession();
@@ -47,9 +34,8 @@ public class PadreManager {
 		t.commit();
 		session.close();
 
-		
 	}
-	
+
 	public Congelar getCongelar(int id) throws Exception {
 		Session session = sf.openSession();
 
@@ -59,9 +45,11 @@ public class PadreManager {
 
 		return congelado;
 	}
+
 	public int createCongelar(Congelar congelado) throws Exception {
-		if(congelado==null) return 0;
-		
+		if (congelado == null)
+			return 0;
+
 		Session session = sf.openSession();
 		Transaction t = session.beginTransaction();
 
@@ -72,16 +60,4 @@ public class PadreManager {
 
 		return id;
 	}
-	
-//	public List<Hijx> dameTodosLosHijxs() throws Exception {
-//		List<Hijx> hijxs=null;
-//		
-//		Session session = sf.openSession();
-//		
-//		hijxs = session.createQuery("FROM Hijxs WHERE pid=?").list();
-//		
-//		session.close();
-//		return hijxs;
-//	}
-
 }
