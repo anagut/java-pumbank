@@ -36,7 +36,7 @@ public class Hijx {
 	@Column(name="email")
 	private String email;
 	
-	@Column(name="contraseña")
+	@Column(name="password")
 	private String contraseña;
 	
 	@ManyToMany(mappedBy = "hijos")

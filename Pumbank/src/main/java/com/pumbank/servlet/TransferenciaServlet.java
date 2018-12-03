@@ -1,7 +1,6 @@
 package com.pumbank.servlet;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -9,7 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.pumbank.models.Hijx;
+import com.pumbank.models.Padre;
 import com.pumbank.persistance.HijoManager;
+import com.pumbank.persistance.PadreManager;
 
 public class TransferenciaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -18,9 +19,18 @@ public class TransferenciaServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		String id = request.getParameter("hid");
+		
+//para simular la sesión abierta del padre
+//		String pidrecibido = request.getParameter("pid");
+
+		int pidrec = 1;
 
 		try {
 			int hid = Integer.parseInt(id);
+//			int pidrec = Integer.parseInt(pidrecibido);
+			Padre padre = PadreManager.getInstance().getPadre(pidrec);
+			request.setAttribute("elPadre", padre);
+			
 			Hijx hijo = HijoManager.getInstance().getHijo(hid);
 			request.setAttribute("unH", hijo);
 			request.getRequestDispatcher("/transferencia.jsp").forward(request, response);

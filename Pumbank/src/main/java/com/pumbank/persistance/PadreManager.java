@@ -1,12 +1,9 @@
 package com.pumbank.persistance;
 
-import java.util.List;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.pumbank.models.Hijx;
 import com.pumbank.models.Padre;
 
 
