@@ -23,6 +23,12 @@
 	</section>
 	<section name="org.eclipse.m2e.core.pom.overview">
 	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item value="480" key="width"/>
+		<item value="443" key="x"/>
+		<item value="10" key="y"/>
+		<item value="531" key="height"/>
+	</section>
 	<section name="MavenProjectWizardArchetypePage">
 		<item value="All Catalogs" key="catalog"/>
 		<list key="projectNameTemplate">
@@ -34,8 +40,21 @@
 			<item value="[name]"/>
 		</list>
 	</section>
+	<section name="MavenModuleWizardParentPage">
+		<list key="moduleName">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Ana\java-pumbank\Pumbank"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -48,13 +67,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.javali.Pumbank"/>
+			<item value="com.javali.PumbankApp"/>
 		</list>
 		<list key="groupId">
 			<item value="com.javali"/>
 		</list>
 		<list key="artifactId">
-			<item value="Pumbank"/>
+			<item value="PumbankApp"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

@@ -1,44 +1,11 @@
-<<<<<<< HEAD
-INDEX VERSION 1.4+C:\Daniel\java-pumbank\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-793927425.index
-303532704.index
-2266472383.index
-138547281.index
-2031938376.index
-858420914.index
-1865737074.index
-4269362038.index
-585630123.index
-=======
-<<<<<<< HEAD
 INDEX VERSION 1.4+C:\Ana\java-pumbank\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-2999292742.index
-=======
-<<<<<<< HEAD
-INDEX VERSION 1.4+C:\Alvaro\java-pumbank\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-2600604506.index
-2130092576.index
-2758537017.index
-617079774.index
-2031938376.index
-4196403476.index
 585630123.index
-2266472383.index
 1865737074.index
-=======
-INDEX VERSION 1.4+C:\Users\Ana\Documents\Workspace\java-pumbank\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
->>>>>>> f5e17c94a21433bc8688866f3b13ba42cd48d088
-2031938376.index
-585630123.index
-2970722902.index
+1244372119.index
+2266472383.index
 2414013600.index
-1504782725.index
-1865737074.index
-<<<<<<< HEAD
-2266472383.index
+2970722902.index
 842605232.index
-=======
-2027501388.index
->>>>>>> 446ee4a24eaf78ae2aeb00441d3b3f423fb26c22
->>>>>>> f5e17c94a21433bc8688866f3b13ba42cd48d088
->>>>>>> fd98a361b432178b5cf5bfd5704c7e23903f8cd8
+1504782725.index
+2999292742.index
+2031938376.index

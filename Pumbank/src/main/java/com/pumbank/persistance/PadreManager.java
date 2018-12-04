@@ -5,11 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-<<<<<<< HEAD
 import com.pumbank.models.Congelar;
-import com.pumbank.models.Hijx;
-=======
->>>>>>> fd98a361b432178b5cf5bfd5704c7e23903f8cd8
 import com.pumbank.models.Padre;
 
 
