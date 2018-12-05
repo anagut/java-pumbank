@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 05-12-2018 a las 15:51:05
+-- Tiempo de generación: 05-12-2018 a las 15:55:56
 -- Versión del servidor: 5.7.11
 -- Versión de PHP: 5.6.18
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `pumbank` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `pumbank`;
-
-
 
 --
 -- Volcado de datos para la tabla `hijo`
@@ -70,7 +68,6 @@ INSERT INTO `congelarcuenta` (`cid`, `fecha_inicio`, `fecha_fin`, `padre`, `hijo
 
 INSERT INTO `paga` (`pgid`, `cantidad`, `frecuencia`, `padre`, `hijo`) VALUES
 (1, 30, 15, 1, 1),
-(2, 25, 15, 1, 2),
 (3, 15, 15, 1, 3),
 (4, 15, 7, 2, 4),
 (5, 20, 7, 2, 5),
