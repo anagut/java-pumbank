@@ -24,12 +24,12 @@ public class CongelarServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String hidrec = request.getParameter("hid");
-		//String pidrec = request.getParameter("pid");
+		String pidrec = request.getParameter("pid");
 		
 		try {
 			int hid = Integer.parseInt(hidrec);
-			//int pid = Integer.parseInt(pidrec);
-			int pid = 1;
+			int pid = Integer.parseInt(pidrec);
+
 			Hijx hijo = HijoManager.getInstance().getHijo(hid);
 			Padre padre = PadreManager.getInstance().getPadre(pid);
 			
@@ -56,16 +56,14 @@ public class CongelarServlet extends HttpServlet {
 		String fecha_inicio = request.getParameter("fecha_inicio");
 		String fecha_fin = request.getParameter("fecha_fin");
 		String hid = request.getParameter("hid");
-//		String pid=request.getParameter("pid");
+		String pid=request.getParameter("pid");
 
 		System.out.println("Fechas:" + fecha_inicio + fecha_fin);
 
 		try {
 
 			int hid1 = Integer.parseInt(hid);
-//			int pid1=Integer.parseInt(pid);
-
-			int pid1 = 1;
+			int pid1=Integer.parseInt(pid);
 
 			DateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
 			Date fecha_inicio_D = format.parse(fecha_inicio);
@@ -87,19 +85,24 @@ public class CongelarServlet extends HttpServlet {
 			System.out.println(congelado);
 
 			CongelarManager.getInstance().createCongelar(congelado);
-				
+			
+			Hijx hijo = HijoManager.getInstance().getHijo(hid1);
+			request.setAttribute("unH", hijo);
+							
 			request.setAttribute("daleCongelado", congelado);
-			request.setAttribute("mensaje", "Your account has been freeze");
+			request.setAttribute("mensaje", "La cuenta ha sido congelada.");
+			request.getRequestDispatcher("/congelar.jsp").forward(request, response);
+			
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println(e.getMessage());
 			request.setAttribute("error", "Ooops, ha habido un error. Inténtelo más tarde.");
+			request.getRequestDispatcher("/congelar.jsp").forward(request, response);
 					
 		}
-
+		
 		doGet(request, response);
-
 	}
 
 }

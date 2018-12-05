@@ -50,7 +50,7 @@
 			</div>
 			<div id="logo">
 				<a href="./padre?pid=${elPadre.pid}">
-					<h1 id=name>${unH.nombre}</h1>
+					<h1 id=name>${elPadre.nombre}</h1>
 				</a>
 			</div>
 
@@ -95,7 +95,7 @@
 
 							<div class="botones">
 								<button type="submit" id="confirmar_congelar">Confirmar</button>
-								<button id=cancelarbtn">Cancelar</button>
+								<button id="cancelarbtn">Cancelar</button>
 							</div>
 
 						</form>
