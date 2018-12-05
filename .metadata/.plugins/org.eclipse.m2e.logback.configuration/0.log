@@ -5516,3 +5516,4 @@ Caused by: org.eclipse.core.runtime.CoreException: One or more constraints have 
 2018-12-05 16:37:00,176 [Worker-196: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2018-12-05 16:37:00,192 [Worker-196: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Ana\java-pumbank\Pumbank\src\test\resources
 >>>>>>> 6da71c809c07a6332bae9d3845cf663960d9dce9
+2018-12-05 16:56:20,454 [Worker-1: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
