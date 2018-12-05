@@ -1,8 +1,6 @@
 package com.pumbank.servlet;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -52,6 +50,8 @@ public class PagaServlet extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println(e.getMessage());
+			request.setAttribute("error", "Ooops, ha habido un error. Inténtelo más tarde.");
+			request.getRequestDispatcher("/paga.jsp").forward(request, response);
 		}
 	}
 

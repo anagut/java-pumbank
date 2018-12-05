@@ -38,6 +38,9 @@ public class TransferenciaServlet extends HttpServlet {
 		} catch (Exception e) {
 
 			e.printStackTrace();
+			System.out.println(e.getMessage());
+			request.setAttribute("error", "Ooops, ha habido un error. Inténtelo más tarde.");
+			request.getRequestDispatcher("/transferencia.jsp").forward(request, response);
 		}
 
 	}
@@ -60,11 +63,14 @@ public class TransferenciaServlet extends HttpServlet {
 
 			request.setAttribute("saldoHijo", unHijo);
 			request.setAttribute("mensaje", "Saldo cambiado!");
+			request.getRequestDispatcher("/transferencia.jsp").forward(request, response);
+			
+			
 		} catch (Exception e) {
 			System.out.println("Exception: " + e.getMessage());
 		}
 
-		doGet(request, response);
+//		doGet(request, response);
 
 	}
 

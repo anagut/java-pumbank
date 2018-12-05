@@ -44,21 +44,27 @@
 				</div>
 			</div>
 			<div id="logo">
-				<a href="./homepage_sr.html">
+				<a href="./padre?pid=${elPadre.pid}">
 					<h1 id=name>${elPadre.nombre}</h1>
 				</a>
 			</div>
 		</header>
 
 		<section>
+
+			<c:if test="${error}">
+				<div id="errorConexion">${error}</div>
+			</c:if>
+			
+			<c:if test="${mensaje}">
+			<div>${mensaje}</div>
+			</c:if>
+
 			<div>
 
 				<h1 name="hid">Transferencia</h1>
 
 				<form method="POST" action="#">
-
-
-					<div>${mensaje}</div>
 
 					<div>
 						<label>Usuario</label> <input name="nombre" id="nombre"
@@ -85,7 +91,8 @@
 							<div>
 								<label for="CVV" class="col-5">CVV</label> <input id="CVV"
 									name="CVV" class="noflechas" type="password" minlength="3"
-									maxlength="3" required value="${elPadre.cvv}" readonly="readonly">
+									maxlength="3" required value="${elPadre.cvv}"
+									readonly="readonly">
 
 							</div>
 
@@ -94,8 +101,8 @@
 
 								<label>Caducidad</label> <input id="mes" name="mes"
 									class="noflechas" type="number" required
-									value="${elPadre.mes_caducidad}" readonly="readonly"> <input id="year"
-									name="year" type="number" class="noflechas"
+									value="${elPadre.mes_caducidad}" readonly="readonly"> <input
+									id="year" name="year" type="number" class="noflechas"
 									value="${elPadre.año_caducidad}" readonly="readonly">
 
 
@@ -124,6 +131,6 @@
 	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 	crossorigin="anonymous"></script>
 
-<script src="./js/admin-paga_script.js"></script>
+<script src="./js/script.js"></script>
 
 </html>

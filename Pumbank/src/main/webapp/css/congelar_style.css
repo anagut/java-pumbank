@@ -137,6 +137,14 @@ div#boton{
     color: red;
     margin: auto;
     padding: 0 0 3% 0;}
+    
+ #errorConexion {margin: auto;
+ padding: 0}
+ 
+ .botones{
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
 
 
 @media screen and (min-width: 568px){
