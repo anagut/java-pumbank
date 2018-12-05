@@ -20,9 +20,8 @@ public class PagaServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-//		String pidrecibido = request.getParameter("pid");
-//		int pidrec = Integer.parseInt(pidrecibido);
-		int pidrec = 1;
+		String pidrecibido = request.getParameter("pid");
+		int pidrec = Integer.parseInt(pidrecibido);
 			
 		String hidrecibido = request.getParameter("hid");
 		int hidrec = Integer.parseInt(hidrecibido);
@@ -70,12 +69,12 @@ public class PagaServlet extends HttpServlet {
 		String frecuenciarec = request.getParameter("frecuencia");
 		int frecuencia = Integer.parseInt(frecuenciarec);
 		
-	
-		int pid = 1; //esto se haría cogiendo el pid desde sesión
+		String pidrecibido = request.getParameter("pid");
+		int pidrec = Integer.parseInt(pidrecibido);
 		
 
 		try {
-			Paga unaPaga = new Paga(pgidrec, cantidad, frecuencia, pid, hidrec);
+			Paga unaPaga = new Paga(pgidrec, cantidad, frecuencia, pidrec, hidrec);
 			
 			if (pgidrec == 0) {
 				
