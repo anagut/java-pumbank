@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -52,20 +52,20 @@
 			<c:forEach var="unHijo" items="${unP.hijos}">
 				<li>
 					<div id="nombre_hijo">${unHijo.nombre}</div>
-					<div id="saldo_hijo">Saldo: ${unHijo.saldo} Euros</div>
+					<div id="saldo_hijo">Saldo: ${unHijo.saldo} €</div>
 
 					<div class="btn-group" role="group" aria-label="Basic example">
 						<div id="yellow" type="button" class="btn btn-group" role="group"
 							aria-label="Basic example">
 							<a href="./paga?hid=${unHijo.hid}&&pid=${unP.pid}">Paga</a>
 						</div>
-						<div id="red" type="button" class="btn btn-group" role="group"
+						<div id="green" type="button" class="btn btn-group" role="group"
 							aria-label="Basic example">
-							<a href="./paga?hid=${unHijo.hid}&&pid=${unP.pid}">Transferencia</a>
+							<a href="./transferencia?hid=${unHijo.hid}&&pid=${unP.pid}">Transferencia</a>
 						</div>
 						<div id="blue" type="button" class="btn btn-group" role="group"
 							aria-label="Basic example">
-							<a href="./paga?hid=${unHijo.hid}&&pid=${unP.pid}">Congelar</a>
+							<a href="./congelar?hid=${unHijo.hid}&&pid=${unP.pid}">Congelar</a>
 						</div>
 					</div>
 				</li>
