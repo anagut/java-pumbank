@@ -20,14 +20,11 @@ public class TransferenciaServlet extends HttpServlet {
 
 		String id = request.getParameter("hid");
 		
-//para simular la sesión abierta del padre
-//		String pidrecibido = request.getParameter("pid");
-
-		int pidrec = 1;
+		String pidrecibido = request.getParameter("pid");
 
 		try {
 			int hid = Integer.parseInt(id);
-//			int pidrec = Integer.parseInt(pidrecibido);
+			int pidrec = Integer.parseInt(pidrecibido);
 			Padre padre = PadreManager.getInstance().getPadre(pidrec);
 			request.setAttribute("elPadre", padre);
 			
@@ -49,6 +46,7 @@ public class TransferenciaServlet extends HttpServlet {
 			throws ServletException, IOException {
 		String saldo = request.getParameter("saldo");
 		String id = request.getParameter("hid");
+		String pidrecibido = request.getParameter("pid");
 
 		try {
 
@@ -63,14 +61,17 @@ public class TransferenciaServlet extends HttpServlet {
 
 			request.setAttribute("saldoHijo", unHijo);
 			request.setAttribute("mensaje", "Saldo cambiado!");
+			
+			int pidrec = Integer.parseInt(pidrecibido);
+			Padre padre = PadreManager.getInstance().getPadre(pidrec);
+			request.setAttribute("elPadre", padre);
+			
 			request.getRequestDispatcher("/transferencia.jsp").forward(request, response);
 			
 			
 		} catch (Exception e) {
 			System.out.println("Exception: " + e.getMessage());
 		}
-
-//		doGet(request, response);
 
 	}
 
