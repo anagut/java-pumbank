@@ -42,16 +42,23 @@
 				</div>
 			</div>
 			<div id="logo">
-				<a href="./homepage_sr.html">
+				<a href="./padre?pid=${elPadre.pid}">
 					<h1 id=name>${elPadre.nombre}</h1>
 				</a>
 			</div>
 		</header>
 		<section>
+
+			<c:if test="${error}">
+				<div>${error}</div>
+			</c:if>
+
 			<div>
 				<h2>Paga</h2>
 				<div id="mensaje" class="error esconder">Introduce bien los
 					datos</div>
+
+
 
 
 				<form method="POST">
@@ -130,7 +137,8 @@
 							<div>
 								<label for="CVV" class="col-5">CVV</label> <input id="CVV"
 									name="CVV" class="noflechas" type="password" minlength="3"
-									maxlength="3" required value="${elPadre.cvv}" readonly="readonly">
+									maxlength="3" required value="${elPadre.cvv}"
+									readonly="readonly">
 
 								<div id="errorCVV" class="error esconder">Completa con el
 									formato correcto</div>
@@ -140,8 +148,10 @@
 
 
 								<label>Caducidad</label> <input id="mes" name="mes"
-									class="noflechas" type="number" required value="${elPadre.mes_caducidad}" readonly="readonly"> <input
-									id="year" name="year" type="number" class="noflechas" value="${elPadre.año_caducidad}" readonly="readonly">
+									class="noflechas" type="number" required
+									value="${elPadre.mes_caducidad}" readonly="readonly"> <input
+									id="year" name="year" type="number" class="noflechas"
+									value="${elPadre.año_caducidad}" readonly="readonly">
 
 
 								<div id="errormes" class="error esconder">Completa
@@ -176,7 +186,7 @@
 	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 	crossorigin="anonymous"></script>
 
-<script src="./js/admin-paga_script.js"></script>
+<script src="./js/script.js"></script>
 
 
 </html>

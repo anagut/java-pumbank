@@ -13,25 +13,39 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.pumbank.models.Congelar;
 import com.pumbank.models.Hijx;
+import com.pumbank.models.Padre;
 import com.pumbank.persistance.CongelarManager;
 import com.pumbank.persistance.HijoManager;
+import com.pumbank.persistance.PadreManager;
 
 public class CongelarServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String id = request.getParameter("hid");
-
+		String hidrec = request.getParameter("hid");
+		//String pidrec = request.getParameter("pid");
+		
 		try {
-			int hid = Integer.parseInt(id);
+			int hid = Integer.parseInt(hidrec);
+			//int pid = Integer.parseInt(pidrec);
+			int pid = 1;
 			Hijx hijo = HijoManager.getInstance().getHijo(hid);
+			Padre padre = PadreManager.getInstance().getPadre(pid);
+			
 			request.setAttribute("unH", hijo);
+			request.setAttribute("elPadre", padre);
+			
 			request.getRequestDispatcher("/congelar.jsp").forward(request, response);
 
 		} catch (Exception e) {
 
 			e.printStackTrace();
+			System.out.println(e.getMessage());
+			request.setAttribute("error", "Ooops, ha habido un error. Inténtelo más tarde.");
+			request.getRequestDispatcher("/congelar.jsp").forward(request, response);
+			
+			
 		}
 
 	}
@@ -69,13 +83,19 @@ public class CongelarServlet extends HttpServlet {
 			congelado.setHid(hid1);
 
 			congelado.setPid(pid1);
+			
+			System.out.println(congelado);
 
 			CongelarManager.getInstance().createCongelar(congelado);
-
+				
 			request.setAttribute("daleCongelado", congelado);
 			request.setAttribute("mensaje", "Your account has been freeze");
+			
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getMessage());
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+			request.setAttribute("error", "Ooops, ha habido un error. Inténtelo más tarde.");
+					
 		}
 
 		doGet(request, response);
