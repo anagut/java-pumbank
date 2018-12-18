@@ -54,6 +54,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Alvaro\java-pumbank\hola"/>
+			<item value="C:\Alvaro\Java-BBDD\EmployeeApp\src\main\java\com\alvaro\controllers\RoleServlet.java"/>
 			<item value="C:\Ana\java-pumbank\Pumbank"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -67,12 +69,21 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.alvaro.habitacion"/>
+			<item value="com.alvaro.habitaciones"/>
+			<item value="com.alvaro.hola"/>
+			<item value="com.alvaro.holi"/>
 			<item value="com.javali.PumbankApp"/>
 		</list>
 		<list key="groupId">
+			<item value="com.alvaro"/>
 			<item value="com.javali"/>
 		</list>
 		<list key="artifactId">
+			<item value="habitacion"/>
+			<item value="habitaciones"/>
+			<item value="hola"/>
+			<item value="holi"/>
 			<item value="PumbankApp"/>
 		</list>
 		<list key="projectNameTemplate">
