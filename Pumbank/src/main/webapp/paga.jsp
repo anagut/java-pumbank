@@ -77,8 +77,7 @@
 							class="noflechas" class="col-3"> <label>€</label>
 					</div>
 					<div>
-						<label>Frecuencia</label>
-						<c:if test="${laPaga.frecuencia_dias ==null}">
+						<label>Frecuencia</label>						
 							<select required name="frecuencia" required>
 								<option value="" disabled selected></option>
 								<option value="7">Cada semana</option>
@@ -86,7 +85,7 @@
 								<option value="30">Cada mes</option>
 								<option value="1">Cada día</option>
 							</select>
-						</c:if>
+						
 						<c:if test="${laPaga.frecuencia_dias ==7}">
 							<select required name="frecuencia" required>
 								<option value="7" selected>Cada semana</option>
